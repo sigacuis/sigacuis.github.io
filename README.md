@@ -20,4 +20,8 @@ The CSS social buttons are from [Nick La.](http://webdesignerwall.com/tutorials/
 
 ## License
 
+<<<<<<< HEAD
 The work is licensed under The MIT License.
+=======
+The work is licensed under The MIT License.
+>>>>>>> 749d24c7789e2d8e6a56ca87d6c154d3c8881a02
