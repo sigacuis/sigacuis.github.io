@@ -14,24 +14,23 @@
    </head>
    <body>
       <div class="container">
-         <header class="jumbotron subhead" id="overview">
-            <p class="lead"> Velit Aliquet Sagittis University </p>
-            <h1>Experimental Research Lab</h1>
-         </header>
+         <div id="header"></div> 
+         <script>
+          fetch('components/header.html').then(response => response.text()).then(data =>{
+             document.getElementById('header').innerHTML = data
+          })
+         </script> 
          <div class="masthead">
             <div class="navbar">
                <div class="navbar-inner">
                   <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
-                        <li class="active" ><a href="#">Contact</a></li>
-                     </ul>
+                     <div id="link-1">
+                     </div>
+                     <script>
+                        fetch('components/containeLink.html').then(response => response.text()).then(data => {
+                           document.getElementById('link-1').innerHTML = data
+                        })
+                     </script>
                   </div>
                </div>
             </div>

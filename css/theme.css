@@ -2,7 +2,10 @@ body {
 	padding-top: 15px;
 	padding-bottom: 0px;
 }
-
+img.logosigac{
+	width: 60px;
+	height: 60px;
+}
 
 /* Custom container */
 
@@ -397,13 +400,13 @@ body>.navbar .brand:hover {
 	color: #fff;
 	text-align: center;
 	text-shadow: 0 1px 3px rgba(0, 0, 0, .4), 0 0 30px rgba(0, 0, 0, .075);
-	background: #30393C;
-	background: -moz-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #30393C), color-stop(100%, #30393C));
-	background: -webkit-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -o-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: -ms-linear-gradient(45deg, #30393C 0%, #000000 100%);
-	background: linear-gradient(45deg, #30393C 0%, #000000 100%) repeat;
+	background: #670404;
+	background: -moz-linear-gradient(45deg, #670404 0%, #000000 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #670404), color-stop(100%, #670404));
+	background: -webkit-linear-gradient(45deg, #670404 0%, #000000 100%);
+	background: -o-linear-gradient(45deg, #670404 0%, #000000 100%);
+	background: -ms-linear-gradient(45deg, #670404 0%, #000000 100%);
+	background: linear-gradient(45deg, #670404 0%, #000000 100%) repeat;
 	-webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
 	-moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
 	box-shadow: inset 0 3px 7px rgba(0, 0, 0, .2), inset 0 -3px 7px rgba(0, 0, 0, .2);
@@ -448,6 +451,10 @@ img.publications-thumb {
 	height: 188px;
 }
 
+.carousel-caption{
+	background: linear-gradient(45deg, #000000 0%, #670404 100%) repeat;
+}
+
 .caption {
 	margin: 10px;
 }
@@ -484,8 +491,10 @@ img.publications-thumb {
 }
 
 img.carousel-image {
-	width: 100%;
+	width: 1000px;
+	height: 750px;
 }
+
 
 li.publication {
 	margin-bottom: 20px;
