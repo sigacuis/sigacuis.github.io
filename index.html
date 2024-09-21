@@ -63,16 +63,29 @@
 </head>
 
 <body>
-   <header>
-      <nav>
-          <a href="#home">Home</a>
-          <a href="#datos">Datos</a>
-          <a href="#videos">Videos</a>
-          <a href="#contacto">Contacto</a>
-      </nav>
-      
-  </header>
    <div class="container">
+      <div id="header"></div> 
+      <script>
+       fetch('components/header.html').then(response => response.text()).then(data =>{
+          document.getElementById('header').innerHTML = data
+       })
+      </script> 
+         <div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <div id="link-1">
+                     </div>
+                     <script>
+                        fetch('components/containeLink.html').then(response => response.text()).then(data => {
+                           document.getElementById('link-1').innerHTML = data
+                        })
+                     </script>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
       <div class="row-fluid">
          <div class="span12">
             <div id="main-carousel" class="carousel slide">
