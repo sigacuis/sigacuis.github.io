@@ -11,31 +11,48 @@
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
    <link href="css/theme.css" rel="stylesheet">
+   <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+
+      header {
+          background-color: #004d99;
+          padding: 20px;
+          color: white;
+      }
+
+      nav {
+          display: flex;
+          justify-content: space-around;
+      }
+
+      nav a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 10px 15px;
+      }
+
+      nav a:hover {
+          background-color: #003366;
+          border-radius: 5px;
+      }
+  </style>
 </head>
 
 <body>
+   <header>
+      <nav>
+          <a href="#home">Home</a>
+          <a href="#datos">Datos</a>
+          <a href="#videos">Videos</a>
+          <a href="#contacto">Contacto</a>
+      </nav>
+  </header>
    <div class="container">
-      <div id="header"></div>
-      <script>
-         fetch('components/header.html').then(response => response.text()).then(data => {
-            document.getElementById('header').innerHTML = data
-         })
-      </script>
-      <div class="masthead">
-         <div class="navbar">
-            <div class="navbar-inner">
-               <div class="container">
-                  <div id="link-1">
-                  </div>
-                  <script>
-                     fetch('components/containeLink.html').then(response => response.text()).then(data => {
-                        document.getElementById('link-1').innerHTML = data
-                     })
-                  </script>
-               </div>
-            </div>
-         </div>
-      </div>
       <div class="row-fluid">
          <div class="span12">
             <div id="main-carousel" class="carousel slide">
