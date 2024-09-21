@@ -41,6 +41,30 @@
           border-radius: 5px;
       }
   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Pie de Página</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+      #footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+          margin-top: auto; /* Asegura que el pie de página se mantenga al fondo */
+      }
+      #footer a {
+          color: #ffcc00; /* Color para los enlaces */
+          text-decoration: none; /* Sin subrayado */
+      }
+  </style>
 </head>
 
 <body>
@@ -51,6 +75,7 @@
           <a href="#videos">Videos</a>
           <a href="#contacto">Contacto</a>
       </nav>
+      
   </header>
    <div class="container">
       <div class="row-fluid">
@@ -225,6 +250,16 @@
    <script src="js/jquery-1.9.1.min.js"></script>
    <script src="js/bootstrap.min.js"></script>
    <script> $('#main-carousel').carousel(); </script>
+   
+   <div id="content">
+      <!-- Aquí va el contenido principal de tu página -->
+  </div>
+
+  <div id="footer">
+      <p>Contáctanos: <a href="mailto:sigac@uis.edu.co">sigac@uis.edu.co</a></p>
+      <p>Síguenos en Instagram: <a href="https://www.instagram.com/sigacuis/" target="_blank">@sigacuis</a></p>
+  </div>
+
 </body>
 
 </html>
