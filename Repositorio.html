@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>Datos Geofísicos</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Research Lab, Home, Velit Aliquet Sagittis University">
+   <meta name="author" content="">
+   <!-- Le styles -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="css/theme.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
+      <div id="header"></div>
+      <script>
+         fetch('components/header.html').then(response => response.text()).then(data => {
+            document.getElementById('header').innerHTML = data
+         })
+      </script>
+      <div class="masthead">
+         <div class="navbar">
+            <div class="navbar-inner">
+               <div class="container">
+                  <div id="link-1">
+                  </div>
+                  <script>
+                     fetch('components/containeLink.html').then(response => response.text()).then(data => {
+                        document.getElementById('link-1').innerHTML = data
+                     })
+                  </script>
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <div class="row-fluid">
+         <div class="span3 bs-docs-sidebar" id="navparent">
+            <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
+               <li><a href="#ProyectoDiamanteUIS"> Proyecto Diamante UIS </a></li>
+               <li><a href="#ProyectoMesa"> Proyecto Mesa de los Santos </a></li>
+               <li><a href="#ProyectoOlivar22"> Proyecto Olivar 2022 </a></li>
+               <li><a href="#ProyectoOlivar24"> Proyecto Olivar 2024 </a></li>
+            </ul>
+         </div>
+         <div class="span8 offset1">
+            <section id="ProyectoDiamanteUIS">
+               <div class="page-header">
+                  <h3>Proyecto Diamante UIS</h3>
+                  <hr>
+                  <p>Adquisición realizada en el diamante de softball en la Universidad Industrial de Santander
+                     durante la práctica de campo de refracción del semestre 2022 – 2 en la materia de
+                     Métodos Geofísicos.
+                  </p>
+                  <a href="">Link del Drive
+                  </a>
+               </div>
+            </section>
+
+            <section id="ProyectoMesa">
+               <div class="page-header">
+                  <h3>Proyecto Mesa de los Santos</h3>
+                  <hr>
+                  <p>
+                     Adquisición realizada en la Mesa de Los Santos durante el desarrollo de la Tesis de
+                     Maestría del estudiante Álvaro Osma
+                  </p>
+               </div>
+            </section>
+
+            <section id="ProyectoOlivar22">
+               <div class="page-header">
+                  <h3>Proyecto Olivar 2022</h3>
+                  <hr>
+                  <p>
+                     El proyecto se realizó en la finca El Olivar ubicada en Piedecuesta (Santander) en el marco
+                     de la Segunda Semana de la Geofísica <a
+                        href="https://www.acggp.org/minciencias-2a-semana-dela-geofisica/">link</a>. La salida técnica
+                     tuvo lugar el sábado 5 de noviembre de 2022 y contó con el
+                     apoyo de las empresas Dimanto, Torres Ingeniería, Cursos & Capacitaciones, Topo
+                     Construcciones, SGI.GEO, Hydroingeniería y GIDCO.
+                  </p>
+               </div>
+            </section>
+
+            <section id="ProyectoOlivar24">
+               <div class="page-header">
+                  <h3>Proyecto Olivar 2024</h3>
+                  <hr>
+                  <p>En el siguiente enlace de Drive pueden encontrar las carpetas de cada metodo geofísico con sus
+                     respectivos datos, reporte de procesamiento
+                     y tutorial de adquisición. Además pueden observar un archivo que contiene la explicación de la
+                     organización de las carpetas.
+                  </p>
+                  <a href="">Link del Drive
+                  </a>
+               </div>
+            </section>
+         </div>
+      </div>
+   </div>
+   <div id="footer"></div>
+   <script>
+      fetch('components/footer.html').then(response => response.text()).then(data => {
+         document.getElementById('footer').innerHTML = data
+      })
+   </script>
+   <!-- Le javascript
+         ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="js/jquery-1.9.1.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         $(document.body).scrollspy({
+            target: "#navparent"
+         });
+      });
+
+   </script>
+</body>
+
+</html>
