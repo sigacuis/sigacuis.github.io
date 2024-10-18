@@ -563,3 +563,28 @@ ul.sponsors {
 	color: #8F8F8F;
 	font-size: 11px;
 }
+
+p.texto_justificado{
+	text-align: justify;
+}
+
+
+
+img.size_image{
+	border-radius: 8px;
+	height: 50vh;
+	position:relative;
+	background-size: contain;
+}
+
+.contentimage{
+	width: 100%;
+	padding-left:220px;
+	display:block;
+}
+
+.contentimage2{
+	width: 100%;
+	padding-left:100px;
+	display:block;
+}
