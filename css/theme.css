@@ -318,6 +318,17 @@ body>.navbar .brand:hover {
 	color: #670404
 }
 
+#media .post_row {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px; /* Espacio entre publicaciones */
+ }
+ 
+#media .post {
+	box-sizing: border-box;
+ }
+
+
 .map .box_wrapp {
 	position: absolute;
 	margin: 15px auto;
