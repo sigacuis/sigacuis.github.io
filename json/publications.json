@@ -1,0 +1,48 @@
+[
+    {
+       "title": "Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning",
+       "date": "26 de Septiembre, 2024",
+       "link": "https://www.sciencedirect.com/science/article/pii/S1342937X24002727",
+       "image": "images/publications_260924.jpg",
+       "alt": "Graphical abstract",
+       "description": "Mineral prospectivity mapping is crucial for identifying areas with economically valuable minerals. Therefore, several methods based on machine learning have been applied to predict the likelihood of mineral occurrences, especially deep learning (DL), which provides a flexible and precise approach to the use of continuous data [...].",
+       "author": "Ana Gabriela Mantilla Dulcey"
+    },
+    {
+      "title": "Herramientas computacionales para las ciencias de la tierra: uso de Python para resolver problemas geológicos",
+      "date": "23 de Agosto, 2024",
+      "link": "https://www.researchgate.net/publication/383410635_Herramientas_computacionales_para_las_ciencias_de_la_tierra_uso_de_Python_para_resolver_problemas_geologicos",
+      "image": "images/publications_230824a.jpg",
+      "alt": "Poster Proyecto Herramientas: Semana Téctnica",
+      "description": "La aplicación de herramientas computacionales en geología permite analizar datos de manera exhaustiva, modelar procesos complejos y predecir fenómenos naturales a través del aprendizaje automático. [...]",
+      "author": "Ana Gabriela Mantilla Dulcey; Shaireth Carvajal; Luisa Gómez; Paul Goyes-Peñafiel"
+   },
+   {
+      "title": "Forward modeling of gravity anomalies, case study: Cerro Machín Volcano.",
+      "date": "23 de Agosto, 2024",
+      "link": "https://www.researchgate.net/publication/383485030_Forward_modeling_of_gravity_anomalies_case_study_Cerro_Machin_Volcano",
+      "image": "images/publications_230824b.jpg",
+      "alt": "Poster Proyecto Gravimetría: Semana Téctnica",
+      "description": "La prospección geofísica con el método de gravimetría ha demostrado resultados promisorios en la definición de modelos del subsuelo en diferentes configuraciones geológicas, especialmente en aquellas donde el contraste de densidades entre las formaciones permite medir las anomalías gravimétricas de manera bidimensional a partir de perfiles o puntos distribuidos espacialmente. [...]",
+      "author": "Gabriel Moreno; Paul Goyes-Peñafiel; Sait Khurama"
+   },
+    {
+       "title": "Inversión 1D y 2D de datos magnetotelúricos para la caracterización de estructuras resistivas profundas.",
+       "date": "22 de Agosto, 2024",
+       "link": "https://www.researchgate.net/publication/383410817_Inversion_1D_y_2D_de_datos_magnetoteluricos_para_la_caracterizacion_de_estructuras_resistivas_profundas?channel=doi&linkId=66cb770c97265406eaad01fb&showFulltext=true",
+       "image": "images/publications_220824a.jpg",
+       "alt": "Poster Proyecto Magnetotelúrico: Semana Téctnica",
+       "description": "La magnetotelúrica (MT) es un método geofísico que utiliza las variaciones del campo magnético natural de la Tierra para inferir la resistividad eléctrica del subsuelo, alcanzando profundidades del orden de kilómetros. Esta información es crucial para la exploración de recursos energéticos como la geotermia, los hidrocarburos y los minerales. [...] ",
+       "author": "Ana Gabriela Mantilla Dulcey; Johan Enrique Paez Romero; Ivan Camilo Caballero Jaimes; Paul Goyes-Peñafiel"
+    },
+    {
+        "title": "Operadores tensoriales diferenciables en el problema inverso aplicado a la geología",
+        "date": "22 de Agosto, 2024",
+        "link": "https://www.researchgate.net/publication/385319225_Operadores_tensoriales_diferenciables_en_el_problema_inverso_aplicado_a_la_geologia",
+        "image": "images/publications_220824b.jpg",
+        "alt": "Poster Proyecto Operadores: Semana Téctnica",
+        "description": "En geofísica, la solución de problemas inversos es clave para inferir propiedades del subsuelo a partir de mediciones en superficie. Los modelos matemáticos conectan observaciones con estas propiedades. Los operadores tensoriales diferenciables (OTD) permiten una representación de estas conexiones, mejorando la interpretación de datos y refinando los modelos de subsuelo.",
+        "author": "Adrian Perez; Paul Goyes-Peñafiel"
+     }
+ ]
+ 
