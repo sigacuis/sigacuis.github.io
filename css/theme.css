@@ -564,6 +564,52 @@ ul.sponsors {
 	font-size: 11px;
 }
 
+.circulo{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+	border: 5px solid rgba(110, 19, 5, 0.895);
+}
+
+.d-item{
+	height: 750;
+}
+
+img.carouselT-image {
+	width: 1000px;
+	height: 750px;
+}
+
+
+.tutoriales-container {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	padding: 40px;
+	max-width: 1000px;
+	margin: 0 auto;
+  }
+  
+  .tutorial {
+	/* background-color: #fff; */
+	/* border-radius: 15px;
+	padding: 20px;
+	width: 250px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+	text-align: center;
+  }
+
+  .circulo{
+	width: 200px;
+	height: 200px;
+	border-radius: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+	border: 5px solid rgba(110, 19, 5, 0.895);
+}
+
 p.texto_justificado{
 	text-align: justify;
 }
