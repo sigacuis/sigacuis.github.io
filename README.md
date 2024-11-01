@@ -1,21 +1,15 @@
+# Página Web del Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)
 
-## Research Lab Website Design Template
+Bienvenidos a la página web oficial del **Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)**. Este sitio está dedicado a la difusión de nuestras actividades, investigaciones y recursos en el área de geofísica aplicada y computacional.
 
-This is a research lab website template that can be used by university students / professors to create a simple website for showing and displaying their labs / research. 
+## Acerca de SIGAC
 
-I built this for my brother years ago, and you can find his current site here: [University of Illinois Energy Transport Research Lab](http://etrl.mechanical.illinois.edu/)
+SIGAC es una comunidad académica integrada por estudiantes de pregrado, quienes, con la dirección y apoyo de profesores y estudiantes de maestría, desarrollan proyectos enfocados en la aplicación de herramientas geofísicas y computacionales para resolver problemáticas de interés científico y práctico.
 
-You can find a live view of the template using the link below:
+## Colaboradores
 
-https://photonlines.github.io/Research-Lab-Website/
+Este sitio web ha sido creado por los miembros de pregrado de SIGAC, bajo la guía y colaboración de nuestros profesores y estudiantes de maestría, quienes han sido fundamentales en el desarrollo y revisión de los contenidos.
 
-It was built using the libraries provided below:
+## Derechos de Autor
 
-- [Twitter Bootstrap (v2.3.1)](https://github.com/twbs/bootstrap)
-- [blueimp Gallery (v1.3.0)](https://github.com/blueimp/Gallery)
-
-The stock photos used within the template are from [Unsplash.](https://unsplash.com/). 
-
-The CSS social buttons are from [Nick La.](http://webdesignerwall.com/tutorials/css-social-buttons)
-
-## License
+Este proyecto es propiedad intelectual de **SIGAC**. Todos los derechos están reservados, y la reproducción, distribución o uso de los contenidos de este sitio web para fines externos debe contar con la autorización previa de SIGAC.
