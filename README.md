@@ -1,21 +1,11 @@
+# Página Web del Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)
 
-## Research Lab Website Design Template
+Bienvenidos a la página web oficial del **Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)**. Este sitio está dedicado a la difusión de nuestras actividades, investigaciones y recursos en el área de la geofísica aplicada y ciencias computacionales aplicadas a la geología.
 
-This is a research lab website template that can be used by university students / professors to create a simple website for showing and displaying their labs / research. 
+## Colaboradores
 
-I built this for my brother years ago, and you can find his current site here: [University of Illinois Energy Transport Research Lab](http://etrl.mechanical.illinois.edu/)
+Este sitio web ha sido creado por los miembros de pregrado de SIGAC, bajo la guía y colaboración de nuestros profesores y estudiantes de maestría, quienes han sido fundamentales en el desarrollo y revisión de los contenidos.
 
-You can find a live view of the template using the link below:
+## Derechos de Autor
 
-https://photonlines.github.io/Research-Lab-Website/
-
-It was built using the libraries provided below:
-
-- [Twitter Bootstrap (v2.3.1)](https://github.com/twbs/bootstrap)
-- [blueimp Gallery (v1.3.0)](https://github.com/blueimp/Gallery)
-
-The stock photos used within the template are from [Unsplash.](https://unsplash.com/). 
-
-The CSS social buttons are from [Nick La.](http://webdesignerwall.com/tutorials/css-social-buttons)
-
-## License
+Este proyecto es propiedad intelectual de **SIGAC**. Todos los derechos están reservados, y la reproducción, distribución o uso de los contenidos de este sitio web para fines externos debe contar con la autorización previa del semillero.
