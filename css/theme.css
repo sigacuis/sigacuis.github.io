@@ -506,8 +506,9 @@ img.publications-thumb {
 }
 
 img.carousel-image {
-	width: 1000px;
-	height: 750px;
+	width: 1000%;
+	height: 100%;
+	object-fit: cover;
 }
 
 
