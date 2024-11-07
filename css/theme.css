@@ -368,6 +368,7 @@ body>.navbar .brand:hover {
 	margin-right: 15px;
 	max-width: 90%;
 	height: 200px;
+	justify-content: center;
 }
 
 .feature-item h5 {
@@ -402,6 +403,7 @@ body>.navbar .brand:hover {
 
 .centered {
 	text-align: center;
+	justify-content: center;
 }
 
 .subhead {
@@ -507,23 +509,12 @@ img.publications-thumb {
 }
 
 img.carousel-image {
-	width: 1080px;
-	height: 720px;
-	object-fit: cover; 
+	width: 100%;
+	height: 360px;
 	display: flex;
     justify-content: center;
     align-items: center;
-	position: center;
-}
-
-img.carousel-image2 {
-	width: 1080px;
-	height: 620px;
-	object-fit: cover; 
-	display: flex;
-    justify-content: center;
-    align-items: center;
-	position: center;
+	object-fit: contain;
 }
 
 li.publication {
@@ -599,13 +590,16 @@ ul.sponsors {
 	border: 5px solid rgba(110, 19, 5, 0.895);
 }
 
-.d-item{
-	height: 750;
+.item {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;;
 }
 
-img.carouselT-image {
-	width: 1000px;
-	height: 750px;
+.d-item{
+	height: 750;
+	justify-content: center;
 }
 
 
@@ -653,10 +647,12 @@ img.size_image{
 	width: 100%;
 	padding-left:220px;
 	display:block;
+	justify-content: center;
 }
 
 .contentimage2{
 	width: 100%;
 	padding-left:100px;
 	display:block;
+	justify-content: center;
 }
