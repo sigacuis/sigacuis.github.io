@@ -468,6 +468,7 @@ img.publications-thumb {
 
 .carousel-caption{
 	background: linear-gradient(45deg, #000000 0%, #670404 100%) repeat;
+	position: relative;
 }
 
 .caption {
@@ -506,11 +507,24 @@ img.publications-thumb {
 }
 
 img.carousel-image {
-	width: 1000%;
-	height: 100%;
-	object-fit: cover;
+	width: 1080px;
+	height: 720px;
+	object-fit: cover; 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: center;
 }
 
+img.carousel-image2 {
+	width: 1080px;
+	height: 620px;
+	object-fit: cover; 
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: center;
+}
 
 li.publication {
 	margin-bottom: 20px;
