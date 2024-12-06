@@ -645,14 +645,8 @@ img.size_image{
 
 .contentimage{
 	width: 100%;
-	padding-left:220px;
+	
 	display:block;
 	justify-content: center;
-}
-
-.contentimage2{
-	width: 100%;
-	padding-left:100px;
-	display:block;
-	justify-content: center;
+	text-align: center;
 }
