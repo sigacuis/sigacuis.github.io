@@ -230,6 +230,35 @@
                               </div>
 
 
+
+                              <!-- HTML para un botón que descarga el archivo YAML -->
+<a href="https://raw.githubusercontent.com/GabrielMoreno09/Entorno-anaconda-Gempy-2024.0.2.0/refs/heads/main/Gempy_2024_0_2_0.yaml" download="Gempy_2024_0_2_0.yaml" class="boton-descarga" target="_blank" rel="noopener noreferrer">
+   Descargar entorno Gempy v2024.0.2.0
+ </a>
+ 
+ <style>
+   .boton-descarga {
+      display: flex; 
+      justify-content: center; 
+     background-color: rgba(110, 19, 5, 0.895);
+     color: white;
+     padding: 12px 24px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 16px;
+     border-radius: 4px;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+   }
+   
+   .boton-descarga:hover {
+     background-color: rgba(202, 48, 25, 0.895);
+   }
+ </style>
+
+<hr>
+
       <div id="footer"></div>
       <script>
          fetch('components/footer.html').then(response => response.text()).then(data => {
