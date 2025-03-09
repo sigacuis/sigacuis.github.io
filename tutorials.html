@@ -402,13 +402,23 @@
                                  </div>
 
                               <!-- HTML para un botón que descarga el archivo YAML -->
-<a href="https://raw.githubusercontent.com/GabrielMoreno09/Entorno-anaconda-Gempy-2024.0.2.0/refs/heads/main/Gempy_2024_0_2_0.yaml" download="Gempy_2024_0_2_0.yaml" class="boton-descarga" target="_blank" rel="noopener noreferrer">
-   Descargar entorno Gempy v2024.0.2.0
- </a>
- 
+<div class="contenedor-botones">
+   <a href="https://drive.google.com/uc?export=download&id=11Z1CoDRxc1ccRkzh0Xwi0JK-vXfXpYml" download="Gempy_2024_0_2_0.yaml" class="boton-descarga" target="_blank" rel="noopener noreferrer">
+      Descargar entorno Gempy v2024.0.2.0
+   </a>
+</div>
+
  <style>
+
+   .contenedor-botones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* Espacio entre botones */
+   }
+
    .boton-descarga {
-      display: flex; 
+      display: inline-block; 
       justify-content: center; 
      background-color: rgba(110, 19, 5, 0.895);
      color: white;
@@ -426,6 +436,9 @@
      background-color: rgba(202, 48, 25, 0.895);
    }
  </style>
+
+
+
 
 <hr>
 
