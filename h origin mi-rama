@@ -1,0 +1,134 @@
+* [33m10a9753[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mTutoriales[m[33m)[m cambio en tutoriales e investigacion
+* [33m384ef41[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Actualizar pagina
+*   [33m20df5f4[m[33m ([m[1;31morigin/feat/nosotros[m[33m, [m[1;32mmain[m[33m)[m Merge branch 'feat/home_main'
+[32m|[m[33m\[m  
+[32m|[m * [33m9811eaa[m[33m ([m[1;31morigin/feat/home_main[m[33m)[m Agregué un logo, style.css, y se modificó el front del index.html
+* [33m|[m [33m4220c68[m Update index.html
+* [33m|[m [33mf92d711[m Update index.html
+[33m|[m[33m/[m  
+* [33mfc60ad2[m Actualizacion de fotogrupal3
+*   [33mf41788c[m Merge branch 'tutorials'
+[34m|[m[35m\[m  
+[34m|[m * [33m78a29f9[m[33m ([m[1;31morigin/tutorials[m[33m)[m Botón perfeccionado y tutoriales de Paul restaurados
+* [35m|[m [33mf599fda[m Merge branch 'tutorials'
+[36m|[m[35m\[m[35m|[m 
+[36m|[m * [33m1667d68[m Agregur el boton de descarga del entorno de anaconda para instalar gempy
+[36m|[m * [33m3aa0097[m Agregue el boton de descarga del entorno de anaconda para instalar Gempy 2024.0.0
+* [1;31m|[m [33ma009485[m Actualización ResearchGate
+* [1;31m|[m [33m810e499[m Añadido el proyecto Maestria1
+* [1;31m|[m [33md203043[m Links al repositorio solo para ver (no editar)
+* [1;31m|[m [33m146371b[m Video añadido
+* [1;31m|[m [33m900f51f[m Nuevos links OneDrive
+* [1;31m|[m [33m47cb4ab[m Se actualizó el repositorio, la sección de noticias en inicio, los miembros y las investigaciones
+* [1;31m|[m [33m418a569[m Actualización OneDrive del carrousel del repositorio
+* [1;31m|[m [33m15b2744[m Actualización del repositorio con links de OneDrive
+* [1;31m|[m   [33mded37b1[m Merge branch 'main' of https://github.com/sigacuis/sigacuis.github.io
+[1;32m|[m[1;33m\[m [1;31m\[m  
+[1;32m|[m * [1;31m|[m [33mfa9c613[m Se actualizó el header de ¿quienes somos? al mismo tamaño de Inicio
+* [1;33m|[m [1;31m|[m [33ma490687[m Todos los headers al mismo tamaño para dispositivo movil.
+[1;33m|[m[1;33m/[m [1;31m/[m  
+* [1;31m|[m   [33m95eee98[m Merge branch 'main' of https://github.com/sigacuis/sigacuis.github.io
+[1;34m|[m[1;35m\[m [1;31m\[m  
+[1;34m|[m * [1;31m|[m [33m426157e[m Cambio investigaciones en curso
+* [1;35m|[m [1;31m|[m [33m0f54f60[m Arreglado Ph.D (c) del profesor Sait Khurama
+[1;35m|[m[1;35m/[m [1;31m/[m  
+* [1;31m|[m [33m8229249[m Centrando el div del carousel
+* [1;31m|[m [33mace4db8[m Se han ajustado las imagenes del carousel a 720px de alto. También se arregló "reflexión" por "refracción" en tutoriales.
+* [1;31m|[m [33m2b4d648[m Corregí el título de la publicación de gravimetría
+* [1;31m|[m [33mcbe42a3[m Agregué los tutoriales de Paul del curso PYTHON BASICO PARA GEOLOGOS, fueron 10 en total y se ubicaron en la parte inferior
+* [1;31m|[m [33m5751391[m Cambio título investigación Shaireth
+* [1;31m|[m   [33m05d0fcd[m Merge branch 'main' of https://github.com/sigacuis/sigacuis.github.io
+[1;36m|[m[31m\[m [1;31m\[m  
+[1;36m|[m * [1;31m|[m [33md5f9813[m Cambio tamaño imagen
+[1;36m|[m * [1;31m|[m [33m93b5067[m Cambio tamaño imagen
+[1;36m|[m * [1;31m|[m [33m9b104b8[m Cambio tamaño imagen
+[1;36m|[m * [1;31m|[m [33mfae848b[m Cambio investigación Shaireth
+[1;36m|[m * [1;31m|[m [33m8adde6d[m Agregué imagen-investigación Shaireth
+[1;36m|[m * [1;31m|[m [33m40b2b6e[m Corrección texto
+[1;36m|[m * [1;31m|[m [33m97e7398[m Correcciones texto
+[1;36m|[m * [1;31m|[m [33md5d548c[m Update README.md
+[1;36m|[m * [1;31m|[m [33mab70015[m Update README.md
+[1;36m|[m * [1;31m|[m [33meadde87[m Corrección texto
+[1;36m|[m * [1;31m|[m [33m6fcb20d[m Correcciones texto
+[1;36m|[m * [1;31m|[m [33m8a5c7d3[m Correcciones texto
+[1;36m|[m * [1;31m|[m [33maf6056d[m Corrección texto
+[1;36m|[m * [1;31m|[m [33meec9d9d[m Actualización de la imagen del logo en about
+* [31m|[m [1;31m|[m [33mdf42f18[m Se unificó el link al repositorio (todos apuntan al Sharepoint)
+* [31m|[m [1;31m|[m [33m031040f[m El carousel se ajusta a las imagenes
+* [31m|[m [1;31m|[m [33ma7fc035[m Se arregló la imagen estirada, y "resvista". También el orden de las paginas.
+[31m|[m[31m/[m [1;31m/[m  
+* [1;31m|[m [33m8fce8dd[m Logo sin fondo
+* [1;31m|[m [33m768a202[m Añadido el favicon, las descripciones en cada sección y arreglados los links al Repositorio de datos geofísicos, instagram y algunos errores de ortografía
+* [1;31m|[m [33m8f808b7[m Eliminé la sección contactos
+* [1;31m|[m [33medd090e[m Arreglé la foto de camilo
+* [1;31m|[m [33m31d3ced[m Delete thumbs/Camilo.jpeg
+* [1;31m|[m [33ma9066a1[m He arreglado algo en las imagenes
+* [1;31m|[m   [33m956f4cb[m Merge remote-tracking branch 'origin/about'
+[32m|[m[33m\[m [1;31m\[m  
+* [33m|[m [1;31m|[m [33m113d339[m Arreglando el texto duplicado
+* [33m|[m [1;31m|[m   [33m3d57f9a[m Merge remote-tracking branch 'origin/investigation'
+[34m|[m[35m\[m [33m\[m [1;31m\[m  
+[34m|[m * [33m|[m [1;31m|[m [33m607868d[m[33m ([m[1;31morigin/investigation[m[33m)[m Se corriggió grado de los supervisores
+[34m|[m * [33m|[m [1;31m|[m [33m4fcd7fe[m Agregué imágenes/investigation
+[34m|[m * [33m|[m [1;31m|[m [33m21e8784[m Realice la seccion de articulos publicados, trabajos de grado en curso e investigaciones en curso
+[34m|[m * [33m|[m [1;31m|[m [33m1d5e806[m Imágenes lineas de investigación
+[34m|[m * [33m|[m [1;31m|[m [33m8bffa17[m Se incluyó la parte de lineas de investigación
+[34m|[m * [33m|[m [1;31m|[m [33mdcdaf4c[m Añadí la estructura de la organización de la información para la página de investigación
+* [35m|[m [33m|[m [1;31m|[m   [33m9cad2a4[m Merge remote-tracking branch 'origin/publications'
+[36m|[m[1;31m\[m [35m\[m [33m\[m [1;31m\[m  
+[36m|[m * [35m|[m [33m|[m [1;31m|[m [33mf8fb99d[m[33m ([m[1;31morigin/publications[m[33m)[m Arreglé un error
+[36m|[m * [35m|[m [33m|[m [1;31m|[m   [33m87bcd40[m Arreglando un error
+[36m|[m [1;32m|[m[1;33m\[m [35m\[m [33m\[m [1;31m\[m  
+[36m|[m [1;32m|[m * [35m|[m [33m|[m [1;31m|[m [33m3b9155d[m Añadí las imagenes de las publicaciones
+[36m|[m [1;32m|[m * [35m|[m [33m|[m [1;31m|[m [33m0880173[m Añadí un json, donde está la info de las publica
+[36m|[m * [1;33m|[m [35m|[m [33m|[m [1;31m|[m [33m8fbf896[m Nuevos archivos
+[36m|[m [1;33m|[m[1;33m/[m [35m/[m [33m/[m [1;31m/[m  
+[36m|[m * [35m|[m [33m|[m [1;31m|[m [33m27d4eb2[m Agregué algunas publicaciones, como también generé un json para facilitar colocar la información de las publicaciones
+* [1;33m|[m [35m|[m [33m|[m [1;31m|[m   [33m0297878[m Merge remote-tracking branch 'origin/members'
+[1;34m|[m[1;35m\[m [1;33m\[m [35m\[m [33m\[m [1;31m\[m  
+[1;34m|[m * [1;33m|[m [35m|[m [33m|[m [1;31m|[m [33mfa3b7ef[m[33m ([m[1;31morigin/members[m[33m)[m He añadido las fotos de los integrantes
+[1;34m|[m * [1;33m|[m [35m|[m [33m|[m [1;31m|[m [33m31a5da7[m He actualizado los miembros
+[1;34m|[m * [1;33m|[m [35m|[m [33m|[m [1;31m|[m [33m3476e89[m Cambie un nombre
+[1;34m|[m * [1;33m|[m [35m|[m [33m|[m [1;31m|[m [33m5e02059[m cambie un nombre
+[1;34m|[m [35m|[m [1;33m|[m[35m/[m [33m/[m [1;31m/[m  
+[1;34m|[m [35m|[m[35m/[m[1;33m|[m [33m|[m [1;31m|[m   
+* [35m|[m [1;33m|[m [33m|[m [1;31m|[m   [33m318acd3[m Merge remote-tracking branch 'origin/tutorials'
+[1;36m|[m[1;31m\[m [35m\[m [1;33m\[m [33m\[m [1;31m\[m  
+[1;36m|[m [1;31m|[m [35m|[m[1;31m_[m[1;33m|[m[1;31m_[m[33m|[m[1;31m/[m  
+[1;36m|[m [1;31m|[m[1;31m/[m[35m|[m [1;33m|[m [33m|[m   
+[1;36m|[m * [35m|[m [1;33m|[m [33m|[m [33m36a7e61[m hice un carousel, y tres columnas con imagenes circulares para los tutoriales de ig y youtube
+[1;36m|[m [35m|[m[35m/[m [1;33m/[m [33m/[m  
+* [35m|[m [1;33m|[m [33m|[m   [33mcef40da[m Merge branch 'header'
+[32m|[m[33m\[m [35m\[m [1;33m\[m [33m\[m  
+[32m|[m * [35m|[m [1;33m|[m [33m|[m [33m81a2404[m[33m ([m[1;31morigin/header[m[33m)[m Añadí sección de noticias y algunas imágenes a la sección de inicio
+[32m|[m [35m|[m[35m/[m [1;33m/[m [33m/[m  
+* [35m|[m [1;33m|[m [33m|[m [33m6b07aa6[m Estas imágenes corresponden a la sección de inicio
+* [35m|[m [1;33m|[m [33m|[m [33m848ed07[m He añadido el logo SIGAC a la carpeta images
+* [35m|[m [1;33m|[m [33m|[m [33m2da741f[m Actualización del repositorio
+* [35m|[m [1;33m|[m [33m|[m [33m99ee528[m probando cambios de mi rama repository
+[34m|[m[35m\[m[35m|[m [1;33m|[m [33m|[m 
+* [35m|[m [1;33m|[m [33m|[m [33m8cd5548[m probando la rama repository
+[35m|[m [35m|[m [1;33m|[m [33m|[m * [33ma22c7a1[m[33m ([m[1;31morigin/about[m[33m)[m Update about.html_ing sistemas
+[35m|[m [35m|[m [1;33m|[m [33m|[m[33m/[m  
+[35m|[m [35m|[m [1;33m|[m * [33m10a8fa1[m He actualizado la sección ¿Quienes somos?
+[35m|[m [35m|[m [1;33m|[m[35m/[m  
+[35m|[m [35m|[m[35m/[m[1;33m|[m   
+[35m|[m * [1;33m|[m [33mbd2c60e[m Add files via upload
+[35m|[m [1;33m|[m[1;33m/[m  
+[35m|[m * [33mdd80e75[m[33m ([m[1;31morigin/repository[m[33m, [m[1;31morigin/contact[m[33m)[m Arreglo del encabezado con las subpáginas de cada grupo correspondiente
+[35m|[m[35m/[m  
+* [33m160d990[m add cambios de la pestaña repositorio
+* [33m9a09af8[m Arreglado el main
+* [33m5539910[m Modifiqué el index.html para estructurarlo mejor
+* [33m0150ff7[m agregué un pie de página en el que aparece el correo y el instagram del sigac, modificando el archivo index.html
+* [33m91711c9[m Eliminé el div con etiqueta header y le agregué una etiqueta header al body. Adicionalmente, en la etiqueta head, le agregué una etiqueta de estilos para el header
+* [33m54f95ef[m ventanas
+* [33m5776b47[m eliminarError
+*   [33mb272892[m .
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m749d24c[m README.md
+* [1;32m|[m [33m7ab071f[m eliminarImages
+[1;32m|[m[1;32m/[m  
+* [33m9d5fcca[m changes
+* [33mc35fbb5[m PrimeraVersion
+* [33md4abdca[m Initial commit
