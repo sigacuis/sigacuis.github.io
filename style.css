@@ -1,0 +1,274 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.logo-text .nombre {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #b30000;
+}
+
+.logo-text .semillero {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navbar nav a {
+  font-weight: 600;
+  color: #111;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #b30000;
+}
+
+/* ====== MENÚ HAMBURGUESA ====== */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #b30000;
+}
+
+.menu-toggle.active i {
+  color: #111;
+}
+
+@media (max-width: 950px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  nav.active {
+    display: flex;
+  }
+  nav a {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* ====== HERO ====== */
+.hero {
+  background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+              url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieJzZkUBBRKKlpzD6akejtdOqyBP8EjQC9xkMAmf8WTv8N5q1bvXZeptXaeNcVHPh1UHgpRAWKKSSiR56HT3dYTk8yqc4081N827dp4zZ86Uzuyw5-eUX-dJpLV_2813qKrHaK8-twg5NKdImg1w7l9K6IV5JOOSTjMVjdhxdO4RTOboqEt5PeLm1khrbr/s4032/Image%20(3).jpeg ');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  background: rgba(255,255,255,0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #b30000;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background-color: #b30000;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #b30000;
+  color: #b30000;
+}
+
+.btn-primary:hover {
+  background-color: #7a0000;
+}
+
+.btn-secondary:hover {
+  background-color: #b30000;
+  color: white;
+}
+
+/* ====== SECCIONES ====== */
+.section {
+  padding: 6rem 10%;
+  text-align: center;
+  background: #ffffff;
+}
+
+.section.alt {
+  background: #f9f9f9;
+}
+
+.section h2 {
+  margin-bottom: 1.5rem;
+  color: #b30000;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* ====== TARJETAS ====== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  width: 280px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 5px 15px rgba(179,0,0,0.2);
+}
+
+/* ====== CONTACTO ====== */
+.contacto {
+  background: #ffffff;
+  color: #222;
+  padding-bottom: 3rem;
+}
+
+.contacto h2 {
+  color: #b30000;
+}
+
+.contacto-info {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contacto-info a {
+  color: #b30000;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.mapa-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* ====== ANIMACIONES (AOS) ====== */
+[data-aos] {
+  transition: all 0.8s ease-in-out;
+}
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .navbar nav {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar nav a {
+  display: inline-block;
+}
+ 
