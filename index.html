@@ -1,158 +1,248 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Semillero SIGAC | Geofísica Aplicada y Computacional</title>
+   <meta charset="utf-8">
+   <title>Página Web SIGAC</title>
+   <link rel="icon" href="images\SIGAC2.png" type="image/x-icon">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Semillero de Investigación en Geofísica Aplicada y Computacional, Universidad Industrial de Santander, UIS, SIGAC, Geofísica computacional, Métodos geofísicos">
+   <meta name="author" content="">
+   <!-- Le styles -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="css/theme.css" rel="stylesheet">
+   <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+      }
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
+      header {
+          background-color: #004d99;
+          padding: 20px;
+          color: white;
+      }
 
-  <!-- AOS Animaciones -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      nav {
+          display: flex;
+          justify-content: space-around;
+      }
 
-  <!-- Iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      nav a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          padding: 10px 15px;
+      }
+
+      nav a:hover {
+          background-color: #003366;
+          border-radius: 5px;
+      }
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+      #footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+          margin-top: auto; /* Asegura que el pie de página se mantenga al fondo */
+      }
+      #footer a {
+          color: #ffcc00; /* Color para los enlaces */
+          text-decoration: none; /* Sin subrayado */
+      }
+  </style>
 </head>
 
 <body>
-  <!-- 🔹 NAVBAR -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="logo_sigac.png" alt="Logo SIGAC">
-      <div class="logo-text">
-        <span class="nombre">SIGAC</span><br>
-        <span class="semillero">Semillero de Investigación en Geofísica Aplicada y Computacional</span>
+   <div class="container">
+      <div id="header"></div> 
+      <script>
+       fetch('components/header.html').then(response => response.text()).then(data =>{
+          document.getElementById('header').innerHTML = data
+       })
+      </script> 
+         <div class="masthead">
+            <div class="navbar">
+               <div class="navbar-inner">
+                  <div class="container">
+                     <div id="link-1">
+                     </div>
+                     <script>
+                        fetch('components/containeLink.html').then(response => response.text()).then(data => {
+                           document.getElementById('link-1').innerHTML = data
+                        })
+                     </script>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+      <div class="row-fluid">
+         <div class="span12">
+            <div id="main-carousel" class="carousel slide">
+               <div class="carousel-inner">
+                  <div class="item active">
+                     <img src="images/Repositorio.png" class="carousel-image" alt="">
+                     <div class="carousel-caption">
+                        <h4><a href="https://mailuis-my.sharepoint.com/:f:/g/personal/sigac_uis_edu_co/EqYnUg-1KdtEuvuX09qk1qsB4sd3w2jlTmZKWdsHA1kbnQ">Repositorio de datos geofísicos UIS</a></h4>
+                        <!-- -->
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/FOTOGRUPAL.jpg"  class="carousel-image" alt="">
+                     <div class="carousel-caption">
+                        <h4>Presentaciones</h4>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/SALIDAS.png"  class="carousel-image " alt="">
+                     <div class="carousel-caption">
+                        <h4>Salidas de campo</h4>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/METODOS.jpg" class="carousel-image" alt="">
+                     <div class="carousel-caption">
+                        <h4>Métodos Geofísicos</h4>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images\PRESENTACIONES.png" class="carousel-image" alt="">
+                     <div class="carousel-caption">
+                        <h4>Participación en la  XVI Semana Tecnica de Geología, Ingeniería Geológica y Geociencias</h4>
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="item">
+                     <img src="images/PresentNicolas.jpg" class="carousel-image" alt="">
+                     <div class="carousel-caption">
+                        <h4>Charlas</h4>
+                        <p></p>
+                     </div>
+                  </div>
+               </div>
+               <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
+               <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
+            </div>
+         </div>
       </div>
-    </div>
+      <hr>
+      <div class="container-fluid">
+         <div class="row-fluid marketing">
+            <div class="span12">
+               <p>
+                  Somos el semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC) conformado por estudiantes de Geología
+                  de la Universidad Industrial de Santander (UIS). Actualmente nuestro enfoque está dirigido en cuatro líneas de investigación que corresponden al aprendizaje automático, geofísica somera, procesamiento y modelamiento sísmico y geociencias computacional.
 
-    <!-- Menú -->
-    <nav id="nav-menu">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Nosotros</a>
-      <a href="repositorio.html">Repositorio</a>
-      <a href="tutoriales.html">Tutoriales</a>
-      <a href="publicaciones.html">Publicaciones</a>
-      <a href="investigacion.html">Investigación</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+                  Nuestro objetivo es reforzar las temáticas relacionadas con la geología y geofísica aplicadas y transmitir el conocimiento a otros estudiantes de la Escuela de Geología de la Universidad Industrial de Santander y al público interesado en geociencias en general mediante la ejecución y elaboración de cursos, talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis en la geofísica computacional.
+               </p>
+               <br />
+            </div>
+            <div class="row-fluid">
+               <hr>
+               <h2 class="centered">Noticias recientes</h2>
+               <hr>
+            </div>
+            <div class="span4 feature-item">
+               <h5> <span class="date">2024-2</span> </h5>
+               <h4 class="feature-heading">
+                     Auxiliaturas de investigación
+               </h4>
+               <hr>
+               <div class="centered">
+                  <a href="https://www.instagram.com/p/C-0Y1PUpImp/?img_index=1">
+                     <img src="images\auxiliares.png" alt="">
+                  </a>
+               </div>
+               <hr>
+               <p>
+                  4 estudiantes de pregrado se encuentran desarrollando auxiliaturas de investigación, 3 de ellos en el proyecto 3925 con el Grupo de Investigación en Diseño de Algoritmos y Procesamiento de Datos Multidimensionales (HDSP) y 1 con el Servicio Geológico Colombiano (SGC). Conoce más <a href="https://www.instagram.com/p/C-0Y1PUpImp/?img_index=1">aquí</a>. 
+               </p>
+               <br />
+            </div>
+            <div class="span4 feature-item">
+               <h5> <span class="date">Octubre, 2024</span> </h5>
+               <h4 class="feature-heading">
+                     Investigación: "Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning"
+               </h4>
+               <hr>
+               <div class="centered">
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S1342937X24002727">
+                     <img src="images\article1.jpg" alt="">
+                  </a>
+               </div>
+               <hr>
+               <p>
+                  Este artículo ha sido publicado en la revista Gondwana Research con autoría de tres miembros del semillero: Msc(s). Ana Mantilla, el coordinador Ph.D (c) Yesid Goyes y el director Ph.D (c) Sait Khurama. Encuentralo <a href="https://www.sciencedirect.com/science/article/abs/pii/S1342937X24002727">aquí</a>. 
+               </p>
+               <br />
+            </div>
+            <div class="span4 feature-item">
+               <h5> <span class="date">Noviembre, 2024</span> </h5>
+               <h4 class="feature-heading">
+                  Estudiantes UIS, entre ellos un miembro del semillero, ocuparon los primeros lugares en el concurso “Datos a la U” del MinTIC
+               </h4>
+               <hr>
+               <div class="centered">
+                  <a href="https://comunicaciones.uis.edu.co/estudiantes-uis-ocuparon-los-primeros-lugares-en-el-concurso-datos-a-la-u-del-mintic/">
+                     <img src="images\MinTICANA.png" alt="">
+                  </a>
+               </div>
+               <hr>
+               <p>
+                  Segundo lugar de la competencia: Equipo FIRENET. Sus creadores son Ana Gabriela Mantilla Dulcey, estudiante de la maestría en Geofísica; León Santiago Suárez Rodríguez, estudiante de la maestría en Ingeniería de Sistemas e Informática; y Luis Miguel Rodríguez López, también estudiante de la maestría en Ingeniería de Sistemas e Informática e integrante del grupo de investigación en Diseño de Algoritmos y Procesamiento de Datos Multidimensionales (HDSP). Encuentra más detalles <a href="https://comunicaciones.uis.edu.co/estudiantes-uis-ocuparon-los-primeros-lugares-en-el-concurso-datos-a-la-u-del-mintic/">aquí</a>. 
+               </p>
+               <br />
+            </div>
+            <!--  
+            <div class="row-fluid">
+               <div class="span4 feature-item">
+                  <h5> <span class="date">Junio, 2024</span> </h5>
+                  <h4 class="feature-heading">
+                        Tutorial para el desarrollo del método de las poligonales con Python
+                  </h4>
+                  <hr>
+                  <div class="centered">
+                     <a href="https://geologia.uis.edu.co/eisi/eisi.jsp?IdServicio=S664&&IdReg=ND342">
+                        <img src="images\poligonales.jpeg" alt=""></a>
+                  </div>
+                  <hr>
+                  <p>
+                     En este tutorial didáctico aprenderás a implementar el método de las poligonales para el cálculo de espesores de estratos rocosos mediante librerías especializadas en el lenguaje de programación Python. Conoce más <a href="https://geologia.uis.edu.co/eisi/eisi.jsp?IdServicio=S664&&IdReg=ND342">aquí</a>.
+                  </p>
+                  <br />
+               </div> -->
+            </div>
+            <hr>
+         </div>
+<div id="footer"></div>
+<script>
+   fetch('components/footer.html').then(response => response.text()).then(data => {
+      document.getElementById('footer').innerHTML = data
+   })
+</script>
+</div>
+</div>
 
-    <!-- Botón hamburguesa -->
-    <div class="menu-toggle" id="menu-toggle">
-      <i class="fa fa-bars"></i>
-    </div>
-  </header>
-
-  <!-- 🔹 HERO -->
-  <section id="inicio" class="hero">
-    <div class="hero-content" data-aos="fade-up">
-      <h1>Geofísica Aplicada y Energía Sostenible</h1>
-      <p>Modelamiento, simulación y análisis computacional al servicio del desarrollo geocientífico de Colombia 🇨🇴</p>
-      <div class="hero-buttons">
-        <a href="#repositorio" class="btn-primary">Ver Repositorio</a>
-        <a href="#contacto" class="btn-secondary">Contáctanos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 SOBRE NOSOTROS -->
-  <section id="nosotros" class="section" data-aos="fade-right">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      Somos el <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
-      conformado por estudiantes de Geología de la <strong>Universidad Industrial de Santander (UIS)</strong>.
-      Nuestro enfoque actual se centra en cuatro líneas de investigación: Aprendizaje automático y minería de datos geocientíficos, geofísica somera aplicada a estudios del subsuelo, procesamiento y modelamiento sísmico 2D y 3D, geociencias computacionales y simulación numérica. Buscamos fortalecer las competencias en geología y geofísica aplicada, difundiendo el conocimiento
-      mediante cursos, talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis
-      en la geofísica computacional.
-    </p>
-  </section>
-
-  <!-- 🔹 NOTICIAS RECIENTES -->
-  <section id="noticias" class="section alt" data-aos="fade-up">
-    <h2>Noticias Recientes</h2>
-
-    <div class="cards">
-      <!-- Noticia 1 -->
-      <div class="card" data-aos="zoom-in">
-        <h3>Auxiliaturas de investigación</h3>
-        <p><strong>2024-2</strong></p>
-        <img src="images/auxiliares.png" alt="Auxiliaturas" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Cuatro estudiantes de pregrado desarrollan auxiliaturas de investigación:
-          tres en el proyecto 3925 junto al Grupo HDSP y uno con el Servicio Geológico Colombiano (SGC).
-          <a href="https://www.instagram.com/p/C-0Y1PUpImp/?img_index=1" target="_blank">Ver más</a>.
-        </p>
-      </div>
-
-      <!-- Noticia 2 -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="150">
-        <h3>Publicación en Gondwana Research</h3>
-        <p><strong>Octubre, 2024</strong></p>
-        <img src="images/article1.jpg" alt="Artículo Gondwana" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Artículo titulado <em>“Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning”</em>,
-          con autoría de miembros del semillero.
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1342937X24002727" target="_blank">Leer artículo</a>.
-        </p>
-      </div>
-
-      <!-- Noticia 3 -->
-      <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <h3>Concurso “Datos a la U” del MinTIC</h3>
-        <p><strong>Noviembre, 2024</strong></p>
-        <img src="images/MinTICANA.png" alt="Concurso MinTIC" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Estudiantes UIS, entre ellos un miembro del SIGAC, obtuvieron el segundo lugar con el proyecto FIRENET
-          en la competencia nacional “Datos a la U” del MinTIC.
-          <a href="https://comunicaciones.uis.edu.co/estudiantes-uis-ocuparon-los-primeros-lugares-en-el-concurso-datos-a-la-u-del-mintic/" target="_blank">Más detalles</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 🔹 REPOSITORIO -->
-  <section id="repositorio" class="section alt" data-aos="fade-left">
-    <h2>Repositorio SIGAC</h2>
-    <p>Explora nuestros códigos, simulaciones y modelos abiertos desarrollados en Python, SimPEG, GemPy y Google Earth Engine.</p>
-    <a href="https://github.com/" class="btn-primary" target="_blank">
-      <i class="fa-brands fa-github"></i> Ir al Repositorio
-    </a>
-  </section>
-
-  <!-- 🔹 CONTACTO -->
-  <section id="contacto" class="section contacto" data-aos="flip-up">
-    <h2>Contáctanos</h2>
-    <div class="contacto-info">
-      <p><strong>Correo:</strong> sigac@uis.edu.co</p>
-      <p><strong>Instagram:</strong> <a href="https://instagram.com/sigacuis" target="_blank">@sigacuis</a></p>
-      <p><strong>LinkedIn:</strong> Semillero de Investigación en Geofísica Aplicada - SIGAC</p>
-      <p><strong>Dirección:</strong> Universidad Industrial de Santander<br> Carrera 27 Calle 9, Bucaramanga, Santander<br> <strong>Teléfono:</strong> +57 (607) 634 4000</p>
-      <p><strong>Ver mapa:</strong></p>
-    </div>
-
-    <!-- Mapa de la UIS -->
-    <div class="mapa-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9967562464143!2d-73.12151242407943!3d7.137003692885069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68156f7c8a7a89%3A0xc94467e5a3989c0b!2sUniversidad%20Industrial%20de%20Santander!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <!-- 🔹 FOOTER -->
-  <footer>
-    <p>© 2025 Semillero SIGAC | Geofísica Aplicada y Computacional</p>
-  </footer>
-
-  <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // Menú hamburguesa
-    const toggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      toggle.classList.toggle('active');
-    });
-  </script>
+<!-- Scripts -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
+
+</body>
+
 </html>
