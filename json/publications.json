@@ -65,7 +65,7 @@
   {
     "title": "Aprendizaje profundo guiado por la física para la inversión no supervisada de datos de resistividad eléctrica en 1D",
     "date": "12 de Agosto, 2025",
-    "link": "#",
+    "link": "https://doi.org/10.13140/RG.2.2.28651.45609",
     "image": "images/Metodologia_Adrian.png",
     "alt": "Poster inversión no supervisada de resistividad eléctrica 1D",
     "description": "Este trabajo presenta una metodología de inversión no supervisada de sondeos eléctricos verticales (SEV) mediante redes neuronales guiadas por la física. Se implementa un operador directo diferenciable acoplado a un esquema de aprendizaje profundo, lo que permite estimar modelos 1D de resistividad sin necesidad de datos etiquetados. Los resultados en datos sintéticos y reales muestran mejoras significativas en precisión y resolución respecto a [..]",
