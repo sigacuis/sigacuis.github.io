@@ -1,161 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>Publicaciones</title>
-      <link rel="icon" href="images\SIGAC2.png" type="image/x-icon">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Research Lab, Home, Velit Aliquet Sagittis University">
-      <meta name="author" content="">
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-      <style>
-         body {
-             font-family: Arial, sans-serif;
-             margin: 0;
-             padding: 0;
-         }
-   
-         header {
-             background-color: #004d99;
-             padding: 20px;
-             color: white;
-         }
-   
-         nav {
-             display: flex;
-             justify-content: space-around;
-         }
-   
-         nav a {
-             color: white;
-             text-decoration: none;
-             font-size: 18px;
-             padding: 10px 15px;
-         }
-   
-         nav a:hover {
-             background-color: #003366;
-             border-radius: 5px;
-         }
-         body {
-             font-family: Arial, sans-serif;
-             margin: 0;
-             padding: 0;
-             display: flex;
-             flex-direction: column;
-             min-height: 100vh;
-         }
-         #footer {
-             background-color: #333;
-             color: white;
-             text-align: center;
-             padding: 10px 0;
-             margin-top: auto; /* Asegura que el pie de página se mantenga al fondo */
-         }
-         #footer a {
-             color: #ffcc00; /* Color para los enlaces */
-             text-decoration: none; /* Sin subrayado */
-         }
-     </style>
-   </head>
-   <body>
-      <div class="container">
-         <div id="header"></div> 
-        <script>
-         fetch('components/header.html').then(response => response.text()).then(data =>{
-            document.getElementById('header').innerHTML = data
-         })
-        </script> 
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <div id="link-1">
-                     </div>
-                     <script>
-                        fetch('components/containeLink.html').then(response => response.text()).then(data => {
-                           document.getElementById('link-1').innerHTML = data
-                        })
-                     </script>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <hr>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicaciones | SIGAC</title>
 
-         <!-------------- CONTENIDO --------------->
+  <!-- MISMO CSS GLOBAL QUE "NOSOTROS" -->
+  <link rel="stylesheet" href="style.css">
 
-         <div id="media">
-            <div class="row-fluid post_row" id="publications-container">
-               <!-- Las publicaciones serán generadas aquí -->
-            </div>
-         
-            <script>
-               // Cargar datos de JSON y crear publicaciones
-               async function loadPublications() {
-                  try {
-                     const response = await fetch('json/publications.json');
-                     const publications = await response.json();
-                     const container = document.getElementById('publications-container');
-         
-                     publications.forEach(pub => {
-                        const postDiv = document.createElement('div');
-                        postDiv.className = 'span6 post';
-                        postDiv.innerHTML = `
-                           <div class="text">
-                              <h5><a href="${pub.link}">${pub.title}</a></h5>
-                              <br/>
-                              <span class="date">${pub.date}</span>
-                           </div>
-                           <div class="img">
-                              <a href="${pub.link}">
-                                 <img src="${pub.image}" alt="${pub.alt}">
-                              </a>
-                           </div>
-                           <div class="text">
-                              <p>${pub.description}</p>
-                           </div>
-                           <div class="author_box">
-                              <h6>${pub.author}</h6>
-                           </div>
-                        `;
-                        container.appendChild(postDiv);
-                     });
-                  } catch (error) {
-                     console.error("Error loading publications:", error);
-                  }
-               }
-         
-               // Llamar la función para cargar publicaciones al cargar la página
-               window.onload = loadPublications;
-            </script>
-         </div>
-
-
-
-
+  <!-- AOS (igual que en Nosotros) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+  <!-- HEADER IDÉNTICO AL DE "NOSOTROS" -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_sigac.png" alt="Logo SIGAC">
+      <div class="logo-text">
+        <span class="nombre">SIGAC</span><br>
+        <span class="semillero">Semillero de Investigación en Geofísica Aplicada y Computacional</span>
       </div>
-      <div id="footer"></div>
-      <script>
-         fetch('components/footer.html').then(response => response.text()).then(data => {
-            document.getElementById('footer').innerHTML = data
-         })
-      </script>
+    </div>
+    <nav id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="Repositorio.html">Repositorio</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="publicaciones.html" class="active">Publicaciones</a>
+      <a href="investigacion.html">Investigación</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
 
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-      </script>
-   </body>
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="section" data-aos="fade-up">
+    <!-- HERO DE PUBLICACIONES -->
+    <section class="hero-publicaciones" data-aos="fade-up">
+      <span class="hero-tag">Producción académica SIGAC</span>
+      <h2>Publicaciones</h2>
+      <p>
+        En esta sección se presentan las publicaciones asociadas al
+        <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
+        incluyendo artículos científicos, capítulos de libro, memorias de congreso y otros productos académicos.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <section id="publicaciones" data-aos="fade-up">
+      <!-- ARTÍCULOS CIENTÍFICOS -->
+      <h3 class="subtitulo-publicaciones">Artículos científicos</h3>
+      <div id="papers-container" class="publications-grid papers-grid">
+        <!-- Las tarjetas de artículos se insertan aquí vía JS -->
+      </div>
+
+      <hr class="divider">
+
+      <!-- POSTERS -->
+      <h3 class="subtitulo-publicaciones">Pósters y presentaciones</h3>
+      <div id="posters-container" class="publications-grid posters-grid">
+        <!-- Las tarjetas de pósters se insertan aquí vía JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Semillero SIGAC | Geofísica Aplicada y Computacional</p>
+  </footer>
+
+  <!-- SCRIPT PARA CARGAR PUBLICACIONES DESDE JSON -->
+  <script>
+    function parseSpanishDate(dateStr) {
+      if (!dateStr) return 0;
+
+      const meses = {
+        "enero": 0, "febrero": 1, "marzo": 2, "abril": 3,
+        "mayo": 4, "junio": 5, "julio": 6, "agosto": 7,
+        "septiembre": 8, "setiembre": 8, "octubre": 9,
+        "noviembre": 10, "diciembre": 11
+      };
+
+      // Soporta: "26 de Septiembre, 2024" / "5 de Agosto" / "12 de Agosto, 2025"
+      const clean = dateStr.toLowerCase().replace(",", "").trim();
+      // "12 de agosto 2025" -> ["12","de","agosto","2025"]
+      const parts = clean.split(/\s+/);
+
+      const dia = parseInt(parts[0], 10) || 1;
+      const mesNombre = parts[2] || "";
+      const mes = meses[mesNombre] ?? 0;
+      const anio = parts[3] ? parseInt(parts[3], 10) : 2024;
+
+      return new Date(anio, mes, dia).getTime();
+    }
+
+    async function loadPublications() {
+      try {
+        const response = await fetch('json/publications.json');
+        const publications = await response.json();
+
+        const papersContainer = document.getElementById('papers-container');
+        const postersContainer = document.getElementById('posters-container');
+
+        // Títulos de los trabajos que son artículos científicos (Ana y Nicolás)
+        const paperTitles = [
+          "Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning",
+          "Reservoir porosity estimation from poststack seismic data using a deep learning model constrained by well porosity: A near-field application"
+        ];
+
+        const papers = [];
+        const posters = [];
+
+        publications.forEach(pub => {
+          if (paperTitles.includes(pub.title)) {
+            papers.push(pub);
+          } else {
+            posters.push(pub);
+          }
+        });
+
+        // Ordenar artículos científicos por fecha (más reciente primero)
+        papers.sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
+
+        // Ordenar pósters por fecha (más reciente primero)
+        posters.sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
+
+        // Helper para crear la tarjeta
+        function createCard(pub) {
+          const card = document.createElement('article');
+          card.className = 'publicacion';
+          card.innerHTML = `
+            <div class="publicacion-img">
+              <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
+                <img src="${pub.image}" alt="${pub.alt}">
+              </a>
+            </div>
+            <div class="publicacion-texto">
+              <h3 class="publicacion-titulo">
+                <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
+                  ${pub.title}
+                </a>
+              </h3>
+              <span class="publicacion-fecha">${pub.date}</span>
+              <p class="publicacion-descripcion">${pub.description}</p>
+              <p class="publicacion-autor"><strong>${pub.author}</strong></p>
+            </div>
+          `;
+          return card;
+        }
+
+        // Renderizar artículos (2 columnas)
+        papers.forEach(pub => {
+          papersContainer.appendChild(createCard(pub));
+        });
+
+        // Renderizar pósters (3 columnas)
+        posters.forEach(pub => {
+          postersContainer.appendChild(createCard(pub));
+        });
+
+      } catch (error) {
+        console.error("Error cargando las publicaciones:", error);
+      }
+    }
+
+    AOS.init({ duration: 1000, once: true });
+    window.onload = loadPublications;
+  </script>
+
+  <!-- ESTILO ESPECÍFICO PARA PUBLICACIONES (RESPETA LA ESTÉTICA DE "NOSOTROS") -->
+  <style>
+    html { 
+      scroll-behavior: smooth; 
+    }
+
+    body { 
+      background-color: #071c1f; 
+      color: #111; 
+    }
+
+    /* HERO de la página de publicaciones con vino tinto SIGAC */
+    .hero-publicaciones {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      padding: 24px 28px;
+      border-radius: 18px;
+      background-color: #7b1113;          /* mismo vino tinto que la sidebar */
+      border: 1px solid #b22222;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+      color: #fff;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffecec;
+      background: #8b1c24;              
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+      border: 1px solid #b22222;
+    }
+
+    .hero-publicaciones h2 { 
+      color: #ffffff;
+      font-size: 2rem;
+      margin: 4px 0 10px 0;
+    }
+
+    .hero-publicaciones p {
+      margin: 0 auto;          
+      color: #fbecec;
+      font-size: 0.98rem;
+      max-width: 900px;
+      text-align: center;      
+    }
+
+    .divider {
+      margin: 32px 0;
+      border: none;
+      border-top: 2px solid #ddd;
+    }
+
+    .subtitulo-publicaciones {
+      color: #a00;
+      margin-bottom: 16px;
+    }
+
+    /* Grid base */
+    .publications-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    /* ARTÍCULOS: 2 por fila */
+    .papers-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* POSTERS: 3 por fila */
+    .posters-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* En pantallas pequeñas: solo 1 por fila */
+    @media (max-width: 768px) {
+      .papers-grid,
+      .posters-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-publicaciones {
+        padding: 18px 16px;
+      }
+
+      .hero-publicaciones h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    .publicacion {
+      background-color: #f8f8f8;
+      color: #111;
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Contenedor con marco fijo y misma relación para todas */
+    .publicacion-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;         /* todas ocupan el mismo espacio visual */
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #fff;      /* fondo para las franjas si sobran bordes */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Imagen sin recorte: se ve completa */
+    .publicacion-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;         /* NO recorta la imagen */
+      display: block;
+    }
+
+    .publicacion-titulo {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #a00;
+    }
+
+    .publicacion-titulo a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .publicacion-titulo a:hover {
+      text-decoration: underline;
+    }
+
+    .publicacion-fecha {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.85rem;
+      color: #555;
+    }
+
+    .publicacion-descripcion {
+      margin: 8px 0;
+      text-align: justify;
+      font-size: 0.95rem;
+    }
+
+    .publicacion-autor {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      main.section {
+        margin-left: 0;
+      }
+    }
+  </style>
+</body>
 </html>
