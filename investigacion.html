@@ -138,7 +138,7 @@
         </div>
       </article>
 
-      <!-- Nueva investigación en curso: Adrián MT + eléctrica -->
+      <!-- Investigación en curso: Adrián MT + eléctrica -->
       <article class="project-card" data-aos="fade-up">
         <img src="images/INV_CONJUN_ADRIAN.png" alt="Inversión conjunta de datos de resistividad magnetotelúrica y eléctrica">
         <div>
@@ -299,8 +299,9 @@
     .project-card img {
       width: 100%;
       border-radius: 10px;
-      object-fit: cover;
-      max-height: 210px;
+      height: auto;
+      object-fit: contain;   /* muestra la imagen completa sin recortar */
+      max-height: 260px;     /* controla qué tan alta máximo puede ser en la tarjeta */
     }
 
     .project-card h3 {
