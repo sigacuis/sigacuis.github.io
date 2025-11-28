@@ -35,6 +35,33 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
   </style>
+  <!-- 🔧 FIX SOLO PARA CELULAR -->
+<style>
+  @media (max-width: 768px) {
+
+    .navbar {
+      position: relative !important;
+    }
+
+    #nav-menu {
+      position: absolute !important;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    #nav-menu.active {
+      display: flex !important;
+    }
+
+    .menu-toggle {
+      position: relative !important;
+      z-index: 9999 !important;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -56,7 +83,7 @@
       <a href="tutoriales.html">Tutoriales</a>
       <a href="publicaciones.html">Publicaciones</a>
       <a href="investigacion.html">Investigación</a>
-      <a href="Equipos.html">Equipos</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
     <!-- Botón hamburguesa -->

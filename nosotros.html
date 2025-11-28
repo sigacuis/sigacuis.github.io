@@ -4,11 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nosotros | SIGAC</title>
+  <link rel="icon" href="logo_sigac.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Iconos (para el menú hamburguesa, igual que en index) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- 🔧 FIX SOLO PARA CELULAR -->
+<style>
+  @media (max-width: 768px) {
+
+    .navbar {
+      position: relative !important;
+    }
+
+    #nav-menu {
+      position: absolute !important;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    #nav-menu.active {
+      display: flex !important;
+    }
+
+    .menu-toggle {
+      position: relative !important;
+      z-index: 9999 !important;
+    }
+  }
+</style>
 </head>
 <body>
+  <!-- NAVBAR -->
   <header class="navbar">
     <div class="logo">
       <img src="logo_sigac.png" alt="Logo SIGAC">
@@ -17,6 +51,7 @@
         <span class="semillero">Semillero de Investigación en Geofísica Aplicada y Computacional</span>
       </div>
     </div>
+
     <nav id="nav-menu">
       <a href="index.html">Inicio</a>
       <a href="nosotros.html" class="active">Nosotros</a>
@@ -26,6 +61,11 @@
       <a href="investigacion.html">Investigación</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <!-- Botón hamburguesa (igual que en index) -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
   </header>
 
   <!-- Barra lateral -->
@@ -57,7 +97,11 @@
           <h4><strong>Sait Khurama Velasquez</strong></h4>
           <p>Geólogo con 30 años de experiencia en diferentes áreas del conocimiento geológico. Candidato a Doctor en Ciencias de la Tierra y del Universo. MSc. en Geofísica. Trece años como docente en la Universidad Industrial de Santander, donde ha sido director de la Escuela de Geología y coordinador de las Maestrías de Geología y Geofísica.</p>
           <p><b>Email:</b> <a href="mailto:skhurama@uis.edu.co">skhurama@uis.edu.co</a></p>
-          <p><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000629782">CvLAC</a> | <a href="https://www.linkedin.com/in/saitkhurama/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Sait-Khurama">ResearchGate</a></p>
+          <p>
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000629782">CvLAC</a> |
+            <a href="https://www.linkedin.com/in/saitkhurama/">LinkedIn</a> |
+            <a href="https://www.researchgate.net/profile/Sait-Khurama">ResearchGate</a>
+          </p>
         </div>
       </div>
 
@@ -67,7 +111,11 @@
           <h4><strong>Yesid Paul Goyes Peñafiel</strong></h4>
           <p>Geólogo con 10 años de experiencia. M.Sc. en Geofísica de la Universidad Estatal de Perm, Rusia. Candidato a Doctor en Ciencias de la Computación (UIS). Intereses: teoría inversa, adquisición y procesamiento sísmico, métodos potencial-EM y deep learning en geociencias.</p>
           <p><b>Email:</b> <a href="mailto:yesid2198435@correo.uis.edu.co">yesid2198435@correo.uis.edu.co</a></p>
-          <p><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001491610">CvLAC</a> | <a href="https://www.linkedin.com/in/paul-goyes-0212b810/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Paul-Goyes-Penafiel">ResearchGate</a></p>
+          <p>
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001491610">CvLAC</a> |
+            <a href="https://www.linkedin.com/in/paul-goyes-0212b810/">LinkedIn</a> |
+            <a href="https://www.researchgate.net/profile/Paul-Goyes-Penafiel">ResearchGate</a>
+          </p>
         </div>
       </div>
     </section>
@@ -84,7 +132,10 @@
           <h4><strong>Nicolas Cordoba Castillo</strong></h4>
           <p>Geólogo, estudiante de maestría en geofísica, con experiencia en el sector O&G, modelamiento petrofísico y machine learning aplicado a la geología. Investiga sobre la estimación de porosidad a partir de sísmica post-apilado.</p>
           <p><b>Email:</b> <a href="mailto:nicolas2228413@correo.uis.edu.co">nicolas2228413@correo.uis.edu.co</a></p>
-          <p><a href="https://www.linkedin.com/in/geonicolascordoba/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Nicolas-Cordoba">ResearchGate</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/geonicolascordoba/">LinkedIn</a> |
+            <a href="https://www.researchgate.net/profile/Nicolas-Cordoba">ResearchGate</a>
+          </p>
         </div>
       </div>
 
@@ -94,7 +145,10 @@
           <h4><strong>Ana Gabriela Mantilla Dulcey</strong></h4>
           <p>Geóloga, estudiante de maestría en geofísica, interesada en geología de campo y computación aplicada a la exploración económica y geofísica. Trabaja en aprendizaje automático para inversión geofísica.</p>
           <p><b>Email:</b> <a href="mailto:ana.mantilla@correo.uis.edu.co">ana.mantilla@correo.uis.edu.co</a></p>
-          <p><a href="https://www.linkedin.com/in/ana-gabriela-mantilla-24377a21a/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Ana-Mantilla-Dulcey">ResearchGate</a></p>
+          <p>
+            <a href="https://www.linkedin.com/in/ana-gabriela-mantilla-24377a21a/">LinkedIn</a> |
+            <a href="https://www.researchgate.net/profile/Ana-Mantilla-Dulcey">ResearchGate</a>
+          </p>
         </div>
       </div>
     </section>
@@ -111,7 +165,11 @@
           <h4><strong>Daniela Quintero Madariaga</strong></h4>
           <p>Recién graduada con intereses en Geofísica, Geociencias Computacionales y Geología Estructural. Dentro del semillero realizó su tesis de pregrado titulada <i>“Integración multifísica para la corrección del desplazamiento estático en métodos eléctricos y disminución de la incertidumbre en los modelos del subsuelo”</i>.</p>
           <p><b>Email:</b> <a href="mailto:daniela2202434@correo.uis.edu.co">daniela2202434@correo.uis.edu.co</a></p>
-          <p><a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758">CvLAC</a> | <a href="https://www.linkedin.com/in/ge%C3%B3logadanielaquintero/">LinkedIn</a> | <a href="https://www.researchgate.net/profile/Daniela-Quintero-30">ResearchGate</a></p>
+          <p>
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758">CvLAC</a> |
+            <a href="https://www.linkedin.com/in/ge%C3%B3logadanielaquintero/">LinkedIn</a> |
+            <a href="https://www.researchgate.net/profile/Daniela-Quintero-30">ResearchGate</a>
+          </p>
         </div>
       </div>
     </section>
@@ -144,7 +202,12 @@
         <img src="thumbs/Kevin_Tarazona.png" alt="Kevin Gabriel Tarazona Balaguera">
         <div>
           <h4><strong>Kevin Gabriel Tarazona Balaguera</strong></h4>
-          <p>Estudiante de geología interesado en geofísica computacional, simulaciones directas y modelamiento de resistividad eléctrica 3D. Actualmente participa en el desarrollo de flujos de trabajo con SimPEG y GemPy.</p>
+          <p>
+            Estudiante de geología interesado en geofísica computacional, simulaciones directas y modelamiento de resistividad eléctrica 3D.
+            Actualmente desarrolla su tesis de pregrado titulada
+            <i>“Estimación de modelos de velocidad mediante aprendizaje profundo no supervisado guiado por la física”</i>.
+          </p>
+          <p><b>Email:</b> <a href="mailto:kevin24di30@gmail.com">kevin24di30@gmail.com</a></p>
         </div>
       </div>
 
@@ -172,14 +235,43 @@
 
   <script>
     AOS.init({ duration: 1000, once: true });
+
+    // Menú hamburguesa (igual que en index)
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
   </script>
 
   <style>
     html { scroll-behavior: smooth; }
-    body { background-color: #071c1f; color: #111; }
-    h2, h3, h4 { color: #9ef01a; }
 
-    .divider { margin: 40px 0; border: none; border-top: 2px solid #ddd; }
+    body {
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    h2 {
+      color: #b30000;
+    }
+
+    h3 {
+      color: #b30000;
+    }
+
+    h4 {
+      color: #333;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .divider {
+      margin: 40px 0;
+      border: none;
+      border-top: 2px solid #ddd;
+    }
 
     .miembro {
       display: flex;
@@ -206,25 +298,22 @@
 
     .miembro div { flex: 1; }
 
-    /* nombres con color gris claro */
-    .miembro h4 {
-      margin-bottom: 8px;
-      color: #555;
-      font-weight: bold;
+    .miembro p {
+      margin: 5px 0;
+      text-align: justify;
     }
 
-    .miembro p { margin: 5px 0; text-align: justify; }
-
-    /* quitar azul y negrilla en los links */
     .miembro a {
       color: #000;
       font-weight: normal;
       text-decoration: none;
     }
 
-    .miembro a:hover { text-decoration: underline; }
+    .miembro a:hover {
+      text-decoration: underline;
+    }
 
-    /* Barra lateral */
+    /* Barra lateral – versión escritorio */
     .sidebar {
       position: fixed;
       top: 120px;
@@ -235,6 +324,7 @@
       border-radius: 12px;
       padding: 20px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      z-index: 50;
     }
 
     .sidebar h3 {
@@ -246,7 +336,12 @@
       padding-bottom: 5px;
     }
 
-    .sidebar ul { list-style: none; padding: 0; margin: 0; }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
     .sidebar li { margin: 10px 0; }
 
     .sidebar a {
@@ -265,17 +360,43 @@
       color: #fff;
     }
 
-    main.section { margin-left: 280px; }
+    /* Main desplazado a la derecha en escritorio */
+    main.section {
+      margin-left: 280px;
+    }
 
-    #docentes, #maestria, #graduados, #pregrado {
+    /* Recuadros de cada bloque */
+    #docentes,
+    #maestria,
+    #graduados,
+    #pregrado {
       background-color: #f8f8f8;
       color: #111;
       padding: 30px;
       border-radius: 10px;
     }
 
-    #maestria h3, #pregrado h3, #docentes h3, #graduados h3 {
-      color: #a00;
+    /* 📱 RESPONSIVE: ajustar sidebar y miembros en pantallas pequeñas */
+    @media (max-width: 900px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        margin: 20px auto 10px;
+      }
+
+      main.section {
+        margin-left: 0;
+      }
+
+      .miembro {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .miembro img {
+        width: 130px;
+        height: 130px;
+      }
     }
   </style>
 </body>

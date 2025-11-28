@@ -4,16 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publicaciones | SIGAC</title>
+  <link rel="icon" href="logo_sigac.png" type="image/png">
 
-  <!-- MISMO CSS GLOBAL QUE "NOSOTROS" -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- AOS (igual que en Nosotros) -->
+  <!-- AOS Animaciones -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Iconos (opcional, por si luego quieres usar) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos específicos para publicaciones (sin tocar style.css) -->
+  <style>
+    /* Imágenes de las cards estilo Repositorio/Tutoriales */
+    .section .card img,
+    .section.alt .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .section .card img:hover,
+    .section.alt .card img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Hacer que todas las cards tengan el botón pegado abajo */
+    .section .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .section .card .btn-secondary {
+      margin-top: auto;        
+      align-self: center;     /* ← CENTRAR EL BOTÓN */
+      display: inline-block;
+    }
+
+    /* Ajustes de texto en las cards de publicaciones */
+    .pub-fecha {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0.25rem 0 0.4rem;
+    }
+
+    .pub-autor {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0.4rem 0 0;
+    }
+
+    .card h3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.35rem;
+      color: #b30000;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+  </style>
+  <!-- 🔧 FIX SOLO PARA CELULAR -->
+<style>
+  @media (max-width: 768px) {
+
+    .navbar {
+      position: relative !important;
+    }
+
+    #nav-menu {
+      position: absolute !important;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    #nav-menu.active {
+      display: flex !important;
+    }
+
+    .menu-toggle {
+      position: relative !important;
+      z-index: 9999 !important;
+    }
+  }
+</style>
 </head>
 <body>
-  <!-- HEADER IDÉNTICO AL DE "NOSOTROS" -->
+
+  <!-- 🔹 NAVBAR -->
   <header class="navbar">
     <div class="logo">
       <img src="logo_sigac.png" alt="Logo SIGAC">
@@ -22,6 +110,7 @@
         <span class="semillero">Semillero de Investigación en Geofísica Aplicada y Computacional</span>
       </div>
     </div>
+
     <nav id="nav-menu">
       <a href="index.html">Inicio</a>
       <a href="nosotros.html">Nosotros</a>
@@ -31,45 +120,63 @@
       <a href="investigacion.html">Investigación</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
-  <main class="section" data-aos="fade-up">
-    <!-- HERO DE PUBLICACIONES -->
-    <section class="hero-publicaciones" data-aos="fade-up">
-      <span class="hero-tag">Producción académica SIGAC</span>
-      <h2>Publicaciones</h2>
-      <p>
-        En esta sección se presentan las publicaciones asociadas al
-        <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
-        incluyendo artículos científicos, capítulos de libro, memorias de congreso y otros productos académicos.
+  <!-- 🔹 HERO PUBLICACIONES -->
+  <section class="hero"
+    style="height: 40vh;
+           background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://i.postimg.cc/nVk0Bktq/Diseno-sin-titulo-2.png');
+           background-size: cover;
+           background-position: center center;
+           background-attachment: fixed;
+           color: #fff;
+           display: flex;
+           justify-content: flex-start;
+           align-items: flex-start;
+           padding: 8% 0 0 8%;
+           text-align: left;">
+    <div data-aos="fade-right" style="max-width: 700px;">
+      <h1 style="font-size: 3.2rem; color: #ffffff; margin-bottom: 1rem;">Publicaciones SIGAC</h1>
+      <p style="font-size: 1.3rem; color: #f0f0f0; margin-bottom: 2rem;">
+        Artículos científicos, pósters y otros productos académicos asociados al
+        Semillero de Investigación en Geofísica Aplicada y Computacional.
       </p>
+      <a href="#publicaciones" class="btn-primary">Ver producción académica</a>
+    </div>
+  </section>
+
+  <!-- 🔹 CONTENIDO PRINCIPAL -->
+  <main>
+
+    <section class="section" id="publicaciones" data-aos="fade-up">
+      <h2>Producción académica SIGAC</h2>
+      <p>
+        A continuación se presentan las publicaciones asociadas al
+        <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
+        incluyendo artículos científicos y pósters.
+      </p>
+
+      <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; color:#b30000;">Artículos científicos</h3>
+      <div id="papers-container" class="cards"></div>
+
+      <h3 style="margin-top: 3rem; margin-bottom: 1rem; color:#b30000;">Pósters y presentaciones</h3>
+      <div id="posters-container" class="cards"></div>
+
     </section>
 
-    <hr class="divider">
-
-    <section id="publicaciones" data-aos="fade-up">
-      <!-- ARTÍCULOS CIENTÍFICOS -->
-      <h3 class="subtitulo-publicaciones">Artículos científicos</h3>
-      <div id="papers-container" class="publications-grid papers-grid">
-        <!-- Las tarjetas de artículos se insertan aquí vía JS -->
-      </div>
-
-      <hr class="divider">
-
-      <!-- POSTERS -->
-      <h3 class="subtitulo-publicaciones">Pósters y presentaciones</h3>
-      <div id="posters-container" class="publications-grid posters-grid">
-        <!-- Las tarjetas de pósters se insertan aquí vía JS -->
-      </div>
-    </section>
   </main>
 
+  <!-- 🔹 FOOTER -->
   <footer>
     <p>© 2025 Semillero SIGAC | Geofísica Aplicada y Computacional</p>
   </footer>
 
-  <!-- SCRIPT PARA CARGAR PUBLICACIONES DESDE JSON -->
+  <!-- 🔹 SCRIPT PARA CARGAR PUBLICACIONES DESDE JSON -->
   <script>
     function parseSpanishDate(dateStr) {
       if (!dateStr) return 0;
@@ -81,9 +188,7 @@
         "noviembre": 10, "diciembre": 11
       };
 
-      // Soporta: "26 de Septiembre, 2024" / "5 de Agosto" / "12 de Agosto, 2025"
       const clean = dateStr.toLowerCase().replace(",", "").trim();
-      // "12 de agosto 2025" -> ["12","de","agosto","2025"]
       const parts = clean.split(/\s+/);
 
       const dia = parseInt(parts[0], 10) || 1;
@@ -102,7 +207,7 @@
         const papersContainer = document.getElementById('papers-container');
         const postersContainer = document.getElementById('posters-container');
 
-        // Títulos de los trabajos que son artículos científicos (Ana y Nicolás)
+        // Títulos de artículos científicos
         const paperTitles = [
           "Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning",
           "Reservoir porosity estimation from poststack seismic data using a deep learning model constrained by well porosity: A near-field application"
@@ -119,45 +224,38 @@
           }
         });
 
-        // Ordenar artículos científicos por fecha (más reciente primero)
         papers.sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
-
-        // Ordenar pósters por fecha (más reciente primero)
         posters.sort((a, b) => parseSpanishDate(b.date) - parseSpanishDate(a.date));
 
-        // Helper para crear la tarjeta
         function createCard(pub) {
-          const card = document.createElement('article');
-          card.className = 'publicacion';
+          const card = document.createElement('div');
+          card.className = 'card';
+          card.setAttribute('data-aos', 'zoom-in');
+
+          const safeTitle = pub.title || '';
+          const safeDesc = pub.description || '';
+          const safeAuthor = pub.author || '';
+          const safeDate = pub.date || '';
+
           card.innerHTML = `
-            <div class="publicacion-img">
-              <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
-                <img src="${pub.image}" alt="${pub.alt}">
-              </a>
-            </div>
-            <div class="publicacion-texto">
-              <h3 class="publicacion-titulo">
-                <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
-                  ${pub.title}
-                </a>
-              </h3>
-              <span class="publicacion-fecha">${pub.date}</span>
-              <p class="publicacion-descripcion">${pub.description}</p>
-              <p class="publicacion-autor"><strong>${pub.author}</strong></p>
-            </div>
+            <a href="${pub.link}" target="_blank" rel="noopener noreferrer">
+              <img src="${pub.image}" alt="${pub.alt || safeTitle}">
+            </a>
+            <h3>${safeTitle}</h3>
+            ${safeDate ? `<p class="pub-fecha">${safeDate}</p>` : ''}
+            ${safeDesc ? `<p>${safeDesc}</p>` : ''}
+            ${safeAuthor ? `<p class="pub-autor"><strong>${safeAuthor}</strong></p>` : ''}
+            <a href="${pub.link}" target="_blank" rel="noopener noreferrer"
+               class="btn-secondary">
+              Ver publicación
+            </a>
           `;
+
           return card;
         }
 
-        // Renderizar artículos (2 columnas)
-        papers.forEach(pub => {
-          papersContainer.appendChild(createCard(pub));
-        });
-
-        // Renderizar pósters (3 columnas)
-        posters.forEach(pub => {
-          postersContainer.appendChild(createCard(pub));
-        });
+        papers.forEach(pub => papersContainer.appendChild(createCard(pub)));
+        posters.forEach(pub => postersContainer.appendChild(createCard(pub)));
 
       } catch (error) {
         console.error("Error cargando las publicaciones:", error);
@@ -168,167 +266,15 @@
     window.onload = loadPublications;
   </script>
 
-  <!-- ESTILO ESPECÍFICO PARA PUBLICACIONES (RESPETA LA ESTÉTICA DE "NOSOTROS") -->
-  <style>
-    html { 
-      scroll-behavior: smooth; 
-    }
+  <!-- 🔹 JS Menú hamburguesa -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
 
-    body { 
-      background-color: #071c1f; 
-      color: #111; 
-    }
-
-    /* HERO de la página de publicaciones con vino tinto SIGAC */
-    .hero-publicaciones {
-      margin-top: 24px;
-      margin-bottom: 24px;
-      padding: 24px 28px;
-      border-radius: 18px;
-      background-color: #7b1113;          /* mismo vino tinto que la sidebar */
-      border: 1px solid #b22222;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
-      color: #fff;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.8rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #ffecec;
-      background: #8b1c24;              
-      padding: 4px 10px;
-      border-radius: 999px;
-      margin-bottom: 8px;
-      border: 1px solid #b22222;
-    }
-
-    .hero-publicaciones h2 { 
-      color: #ffffff;
-      font-size: 2rem;
-      margin: 4px 0 10px 0;
-    }
-
-    .hero-publicaciones p {
-      margin: 0 auto;          
-      color: #fbecec;
-      font-size: 0.98rem;
-      max-width: 900px;
-      text-align: center;      
-    }
-
-    .divider {
-      margin: 32px 0;
-      border: none;
-      border-top: 2px solid #ddd;
-    }
-
-    .subtitulo-publicaciones {
-      color: #a00;
-      margin-bottom: 16px;
-    }
-
-    /* Grid base */
-    .publications-grid {
-      display: grid;
-      gap: 24px;
-    }
-
-    /* ARTÍCULOS: 2 por fila */
-    .papers-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    /* POSTERS: 3 por fila */
-    .posters-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    /* En pantallas pequeñas: solo 1 por fila */
-    @media (max-width: 768px) {
-      .papers-grid,
-      .posters-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-publicaciones {
-        padding: 18px 16px;
-      }
-
-      .hero-publicaciones h2 {
-        font-size: 1.6rem;
-      }
-    }
-
-    .publicacion {
-      background-color: #f8f8f8;
-      color: #111;
-      border-radius: 12px;
-      padding: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    /* Contenedor con marco fijo y misma relación para todas */
-    .publicacion-img {
-      width: 100%;
-      aspect-ratio: 4 / 3;         /* todas ocupan el mismo espacio visual */
-      overflow: hidden;
-      border-radius: 10px;
-      background-color: #fff;      /* fondo para las franjas si sobran bordes */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-
-    /* Imagen sin recorte: se ve completa */
-    .publicacion-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;         /* NO recorta la imagen */
-      display: block;
-    }
-
-    .publicacion-titulo {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #a00;
-    }
-
-    .publicacion-titulo a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .publicacion-titulo a:hover {
-      text-decoration: underline;
-    }
-
-    .publicacion-fecha {
-      display: inline-block;
-      margin-top: 4px;
-      font-size: 0.85rem;
-      color: #555;
-    }
-
-    .publicacion-descripcion {
-      margin: 8px 0;
-      text-align: justify;
-      font-size: 0.95rem;
-    }
-
-    .publicacion-autor {
-      margin: 0;
-      font-size: 0.9rem;
-      color: #333;
-    }
-
-    @media (max-width: 768px) {
-      main.section {
-        margin-left: 0;
-      }
-    }
-  </style>
 </body>
 </html>

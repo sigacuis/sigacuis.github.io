@@ -15,9 +15,43 @@
 
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- 🔧 FIX SOLO PARA CELULAR (NO TOCA ESCRITORIO) -->
+  <style>
+    @media (max-width: 768px) {
+
+      /* La navbar sirve de referencia en móvil */
+      .navbar {
+        position: relative !important;
+      }
+
+      /* Menú oculto por defecto en móvil */
+      #nav-menu {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;              /* oculto inicialmente */
+        flex-direction: column;     /* se ve tipo lista vertical */
+      }
+
+      /* Cuando se hace clic y se agrega .active, se muestra */
+      #nav-menu.active {
+        display: flex !important;
+      }
+
+      /* Botón hamburguesa por encima del menú */
+      .menu-toggle {
+        position: relative !important;
+        z-index: 9999 !important;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
+
   <!-- 🔹 NAVBAR -->
   <header class="navbar">
     <div class="logo">
@@ -36,7 +70,7 @@
       <a href="tutoriales.html">Tutoriales</a>
       <a href="publicaciones.html">Publicaciones</a>
       <a href="investigacion.html">Investigación</a>
-      <a href="#Equipos.html">Equipos</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
     <!-- Botón hamburguesa -->
@@ -63,10 +97,12 @@
     <p>
       Somos el <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
       conformado por estudiantes de Geología de la <strong>Universidad Industrial de Santander (UIS)</strong>.
-      Nuestro enfoque actual se centra en cuatro líneas de investigación: Aprendizaje automático y minería de datos geocientíficos,
-      geofísica somera aplicada a estudios del subsuelo, procesamiento y modelamiento sísmico 2D y 3D, geociencias computacionales
-      y simulación numérica. Buscamos fortalecer las competencias en geología y geofísica aplicada, difundiendo el conocimiento
-      mediante cursos, talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis en la geofísica computacional.
+      Nuestro enfoque actual se centra en cuatro líneas de investigación: Aprendizaje automático y minería
+      de datos geocientíficos, geofísica somera aplicada a estudios del subsuelo, procesamiento y
+      modelamiento sísmico 2D y 3D, geociencias computacionales y simulación numérica. Buscamos fortalecer
+      las competencias en geología y geofísica aplicada, difundiendo el conocimiento mediante cursos,
+      talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis en la geofísica
+      computacional.
     </p>
   </section>
 
@@ -74,53 +110,64 @@
   <section id="noticias" class="section alt" data-aos="fade-up">
     <h2>Noticias Recientes</h2>
 
-    <div class="cards">
+    <div class="cards" style="justify-content:center;">
+
       <!-- Noticia 1 -->
       <div class="card" data-aos="zoom-in">
-        <h3>Auxiliaturas de investigación</h3>
-        <p><strong>2024-2</strong></p>
-        <img src="images/auxiliares.png" alt="Auxiliaturas" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Cuatro estudiantes de pregrado desarrollan auxiliaturas de investigación:
-          tres en el proyecto 3925 junto al Grupo HDSP y uno con el Servicio Geológico Colombiano (SGC).
-          <a href="https://www.instagram.com/p/C-0Y1PUpImp/?img_index=1" target="_blank">Ver más</a>.
-        </p>
+        <p><strong>Desde Instagram · Reciente</strong></p>
+
+        <iframe 
+          src="https://www.instagram.com/p/DNHDbyKSfDz/embed" 
+          width="100%" height="450" 
+          frameborder="0" scrolling="no" allowtransparency="true">
+        </iframe>
+
+        <a href="https://www.instagram.com/p/DNHDbyKSfDz/"
+           target="_blank"
+           class="btn-secondary"
+           style="display:inline-block; margin-top:15px;">
+          Ver publicación
+        </a>
       </div>
 
       <!-- Noticia 2 -->
       <div class="card" data-aos="zoom-in" data-aos-delay="150">
-        <h3>Publicación en Gondwana Research</h3>
-        <p><strong>Octubre, 2024</strong></p>
-        <img src="images/article1.jpg" alt="Artículo Gondwana" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Artículo titulado <em>“Porphyry-type mineral prospectivity mapping with imbalanced data via prior geological transfer learning”</em>,
-          con autoría de miembros del semillero.
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1342937X24002727" target="_blank">Leer artículo</a>.
-        </p>
+        <p><strong>Desde Instagram · Reciente</strong></p>
+
+        <iframe 
+          src="https://www.instagram.com/p/DAr_kwYt7IE/embed" 
+          width="100%" height="450" 
+          frameborder="0" scrolling="no" allowtransparency="true">
+        </iframe>
+
+        <a href="https://www.instagram.com/p/DAr_kwYt7IE/"
+           target="_blank"
+           class="btn-secondary"
+           style="display:inline-block; margin-top:15px;">
+          Ver publicación
+        </a>
       </div>
 
       <!-- Noticia 3 -->
       <div class="card" data-aos="zoom-in" data-aos-delay="300">
-        <h3>Concurso “Datos a la U” del MinTIC</h3>
-        <p><strong>Noviembre, 2024</strong></p>
-        <img src="images/MinTICANA.png" alt="Concurso MinTIC" style="width:100%; border-radius:12px; margin:10px 0;">
-        <p>
-          Estudiantes UIS, entre ellos un miembro del SIGAC, obtuvieron el segundo lugar con el proyecto FIRENET
-          en la competencia nacional “Datos a la U” del MinTIC.
-          <a href="https://comunicaciones.uis.edu.co/estudiantes-uis-ocuparon-los-primeros-lugares-en-el-concurso-datos-a-la-u-del-mintic/" target="_blank">Más detalles</a>.
-        </p>
+        <p><strong>Desde Instagram · Reciente</strong></p>
+
+        <iframe 
+          src="https://www.instagram.com/p/DGOyjppOqQ-/embed"
+          width="100%" height="450"
+          frameborder="0" scrolling="no" allowtransparency="true">
+        </iframe>
+
+        <a href="https://www.instagram.com/p/DGOyjppOqQ-/"
+           target="_blank"
+           class="btn-secondary"
+           style="display:inline-block; margin-top:15px;">
+          Ver publicación
+        </a>
       </div>
+
     </div>
   </section>
-
-  <!-- 🔹 REPOSITORIO
-  <section id="repositorio" class="section alt" data-aos="fade-left">
-    <h2>Repositorio SIGAC</h2>
-    <p>Explora nuestros códigos, simulaciones y modelos abiertos desarrollados en Python, SimPEG, GemPy y Google Earth Engine.</p>
-    <a href="https://github.com/" class="btn-primary" target="_blank">
-      <i class="fa-brands fa-github"></i> Ir al Repositorio
-    </a>
-  </section> -->
 
   <!-- 🔹 CONTACTO -->
   <section id="contacto" class="section contacto" data-aos="flip-up">
@@ -137,11 +184,11 @@
       <p><strong>Ver mapa:</strong></p>
     </div>
 
-    <!-- Mapa de la UIS -->
     <div class="mapa-container">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9967562464143!2d-73.12151242407943!3d7.137003692885069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e68156f7c8a7a89%3A0xc94467e5a3989c0b!2sUniversidad%20Industrial%20de%20Santander!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
-        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </section>
 
@@ -161,6 +208,6 @@
       toggle.classList.toggle('active');
     });
   </script>
-</body>
 
+</body>
 </html>

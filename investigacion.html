@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investigación | SIGAC</title>
 
-  <link rel="icon" href="images/SIGAC2.png" type="image/x-icon">
+  <link rel="icon" href="logo_sigac.png" type="image/png">
 
   <!-- Estilo global SIGAC -->
   <link rel="stylesheet" href="style.css">
@@ -13,6 +13,84 @@
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Iconos (por si los usas después) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Estilos específicos para esta página (sin tocar style.css) -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #ffffff;
+      color: #111;
+    }
+
+    .divider {
+      margin: 40px 0;
+      border: none;
+      border-top: 2px solid #ddd;
+    }
+
+    /* Imágenes de las cards, igual estilo que Repositorio/Tutoriales/Publicaciones */
+    .section .card img,
+    .section.alt .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .section .card img:hover,
+    .section.alt .card img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Ajuste de texto en las cards de investigación */
+    .card h3 {
+      margin-top: 0.75rem;
+      margin-bottom: 0.35rem;
+      color: #b30000;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .card b {
+      color: #333;
+    }
+  </style>
+  <!-- 🔧 FIX SOLO PARA CELULAR -->
+<style>
+  @media (max-width: 768px) {
+
+    .navbar {
+      position: relative !important;
+    }
+
+    #nav-menu {
+      position: absolute !important;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+    }
+
+    #nav-menu.active {
+      display: flex !important;
+    }
+
+    .menu-toggle {
+      position: relative !important;
+      z-index: 9999 !important;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -34,185 +112,184 @@
       <a href="investigacion.html" class="active">Investigación</a>
       <a href="contacto.html">Contacto</a>
     </nav>
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
   </header>
 
+  <!-- 🔹 HERO INVESTIGACIÓN (mismo estilo que Repositorio/Tutoriales/Publicaciones) -->
+  <section class="hero"
+    style="height: 40vh;
+           background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                      url('https://i.postimg.cc/nVk0Bktq/Diseno-sin-titulo-2.png');
+           background-size: cover;
+           background-position: center center;
+           background-attachment: fixed;
+           color: #fff;
+           display: flex;
+           justify-content: flex-start;
+           align-items: flex-start;
+           padding: 8% 0 0 8%;
+           text-align: left;">
+    <div data-aos="fade-right" style="max-width: 700px;">
+      <h1 style="font-size: 3.2rem; color: #ffffff; margin-bottom: 1rem;">Investigación SIGAC</h1>
+      <p style="font-size: 1.3rem; color: #f0f0f0; margin-bottom: 2rem;">
+        Líneas de investigación, proyectos en curso y trabajos finalizados
+        en geofísica aplicada y computacional.
+      </p>
+      <a href="#lineas" class="btn-primary">Ver líneas de investigación</a>
+    </div>
+  </section>
+
   <!-- CONTENIDO PRINCIPAL -->
-  <main class="section" data-aos="fade-up">
-    <h2>Líneas de Investigación</h2>
+  <main>
 
-    <div class="research-block" data-aos="fade-up">
-      <img src="images/aprendizaje.jpg" alt="Aprendizaje automático" class="research-img">
-      <div class="research-text">
-        <h3>Aprendizaje automático</h3>
-        <p>
-          El aprendizaje automático es una rama de la inteligencia artificial que habilita a los sistemas para aprender
-          y evolucionar de manera independiente, utilizando redes neuronales y técnicas de aprendizaje profundo, sin
-          requerir una programación explícita, mediante el análisis de grandes volúmenes de datos.
-        </p>
-        <p>
-          Este tipo de aprendizaje permite que los sistemas informáticos se adapten y perfeccionen continuamente a
-          medida que adquieren más "experiencias". Así, su rendimiento puede mejorar al ofrecerles conjuntos de datos
-          más amplios y diversos para procesar (Google Cloud, 2024).
-        </p>
+    <!-- 🔹 LÍNEAS DE INVESTIGACIÓN (ahora en tarjetas) -->
+    <section class="section" id="lineas" data-aos="fade-up">
+      <h2>Líneas de Investigación</h2>
+      <p>
+        El semillero SIGAC desarrolla actividades en varias líneas de trabajo que integran
+        geofísica aplicada, modelamiento numérico e inteligencia artificial.
+      </p>
+
+      <div class="cards">
+        <!-- Aprendizaje automático -->
+        <div class="card" data-aos="zoom-in">
+          <img src="images/aprendizaje.jpg" alt="Aprendizaje automático">
+          <h3>Aprendizaje automático</h3>
+          <p>
+            Uso de técnicas de aprendizaje profundo y redes neuronales para analizar grandes volúmenes
+            de datos geocientíficos. Los modelos se entrenan con datos reales y sintéticos para tareas
+            como clasificación, regresión, detección de patrones y estimación de propiedades del subsuelo.
+          </p>
+        </div>
+
+        <!-- Geofísica somera -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/nearsurface.jpg" alt="Geofísica somera">
+          <h3>Geofísica somera</h3>
+          <p>
+            Aplicación de métodos geofísicos de alta resolución en los primeros cientos de metros del
+            subsuelo para resolver problemas geotécnicos, ambientales e hidrogeológicos. Se priorizan
+            técnicas no invasivas y de bajo costo con alto impacto en la caracterización del terreno.
+          </p>
+        </div>
+
+        <!-- Procesamiento y modelamiento sísmico -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/procesamiento.jpg" alt="Procesamiento y modelamiento sísmico">
+          <h3>Procesamiento y modelamiento sísmico</h3>
+          <p>
+            Procesamiento de datos sísmicos 2D y 3D para obtener imágenes limpias del subsuelo, así
+            como modelamiento directo y posterior inversión de parámetros. Se estudian límites de
+            resolución, efectos del ruido y estrategias para reducir la ambigüedad de la interpretación.
+          </p>
+        </div>
+
+        <!-- Geociencias computacionales -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/geocomputacional.jpg" alt="Geociencias computacionales">
+          <h3>Geociencias computacionales</h3>
+          <p>
+            Desarrollo y uso de modelos numéricos y simulaciones que integran datos de campo, laboratorio
+            y bases de datos públicas. Se combinan modelos conceptuales, matemáticos y computacionales
+            para estudiar procesos geológicos con incertidumbre controlada.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="research-block" data-aos="fade-up">
-      <img src="images/nearsurface.jpg" alt="Geofísica somera" class="research-img">
-      <div class="research-text">
-        <h3>Geofísica somera</h3>
-        <p>
-          La geofísica somera desempeña un papel crucial en la resolución de desafíos geotécnicos al ofrecer información
-          valiosa sobre las características del subsuelo. Estas técnicas no invasivas y rentables utilizan diversos métodos
-          geofísicos para analizar las condiciones cercanas a la superficie.
-        </p>
-        <p>
-          Una de las principales ventajas es la capacidad de mapear estructuras subterráneas y detectar anomalías sin necesidad
-          de realizar perforaciones o excavaciones extensivas, reduciendo la perturbación del sitio, minimizando el impacto
-          ambiental y ahorrando tiempo y recursos (Abitibi Geophysics, 2024).
-        </p>
-      </div>
-    </div>
+    <!-- 🔹 INVESTIGACIONES EN CURSO (cards) -->
+    <section class="section alt" id="en-curso" data-aos="fade-up">
+      <h2>Investigaciones en curso</h2>
 
-    <div class="research-block" data-aos="fade-up">
-      <img src="images/procesamiento.jpg" alt="Procesamiento y modelamiento sísmico" class="research-img">
-      <div class="research-text">
-        <h3>Procesamiento y modelamiento sísmico</h3>
-        <p>
-          Durante el procesamiento sísmico enormes volúmenes de datos recopilados en el campo se reducen a imágenes simples que
-          pueden mostrarse en papel o en la pantalla de una estación de trabajo. Aunque esta imagen simplificada contiene menos
-          información sobre el subsuelo, es fácilmente accesible para el intérprete al eliminar artefactos y errores en los datos
-          (AAPG Wiki, 2022).
-        </p>
-        <p>
-          Estos datos limpios dan lugar a la fase de modelamiento, que consiste en comparar, simular y representar datos sísmicos
-          para definir límites de resolución sísmica, evaluar la ambigüedad de las interpretaciones y realizar predicciones sobre
-          el subsuelo (SLB, 2024).
-        </p>
-      </div>
-    </div>
-
-    <div class="research-block" data-aos="fade-up">
-      <img src="images/geocomputacional.jpg" alt="Geociencias computacionales" class="research-img">
-      <div class="research-text">
-        <h3>Geociencias computacionales</h3>
-        <p>
-          La fusión de la Ciencia Computacional —matemáticas aplicadas, computación e informática— con las Ciencias de la Tierra ha
-          dado lugar a la Geociencia Computacional.
-        </p>
-        <p>
-          Esta disciplina permite desarrollar programas de cómputo que combinan modelos conceptuales, matemáticos y numéricos con
-          datos de laboratorio y de campo de diferentes escalas espaciotemporales y diversas fuentes, con cierto grado de
-          incertidumbre asociado (UNAM, 2024).
-        </p>
-      </div>
-    </div>
-
-    <hr class="divider">
-
-    <!-- INVESTIGACIONES EN CURSO -->
-    <h2>Investigaciones en curso</h2>
-
-    <div class="card-grid">
-      <!-- Investigación en curso: Kevin -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/KEVIN_INVESTIGACION.png" alt="Estimación de modelos de velocidad con aprendizaje profundo no supervisado">
-        <div>
-          <h3>Estimación de modelos de velocidad mediante un enfoque de aprendizaje profundo no supervisado guiado por la física</h3>
-          <p><b>Objetivo:</b> Estimar modelos de velocidad mediante un enfoque de aprendizaje profundo no supervisado guiado por la física.</p>
+      <div class="cards">
+        <!-- Investigación en curso: Kevin -->
+        <div class="card" data-aos="zoom-in">
+          <img src="images/KEVIN_INVESTIGACION.png" alt="Estimación de modelos de velocidad con aprendizaje profundo no supervisado">
+          <h3>Estimación de modelos de velocidad mediante aprendizaje profundo no supervisado guiado por la física</h3>
+          <p><b>Objetivo:</b> Estimar modelos de velocidad mediante un enfoque de aprendizaje profundo no supervisado guiado por principios físicos.</p>
           <p><b>En desarrollo por:</b> Est. Geol. Kevin Tarazona.</p>
           <p><b>Supervisor:</b> Ph.D (c) Yesid Paul Goyes.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales, Procesamiento y modelamiento sísmico.</p>
         </div>
-      </article>
-
-      <!-- Investigación en curso: Adrián 1D -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/INV_ADRIAN.jpg" alt="Aprendizaje profundo guiado por la física 1D">
-        <div>
-          <h3>Aprendizaje profundo guiado por la física para la inversión no supervisada de datos de resistividad eléctrica en 1D</h3>
-          <p><b>Objetivo:</b> Desarrollar un modelo de aprendizaje profundo guiado por principios físicos para la inversión no supervisada de datos de resistividad eléctrica en 1D, integrando conocimiento geofísico para mejorar precisión y robustez.</p>
+        
+        <!-- Investigación en curso: Adrián 1D -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/INV_ADRIAN.jpg" alt="Aprendizaje profundo guiado por la física 1D">
+          <h3>Aprendizaje profundo guiado por la física para inversión no supervisada de resistividad eléctrica 1D</h3>
+          <p><b>Objetivo:</b> Desarrollar un modelo de aprendizaje profundo guiado por principios físicos para la inversión no supervisada de datos de resistividad eléctrica en 1D.</p>
           <p><b>En desarrollo por:</b> Est. Geol. Adrián Pérez.</p>
           <p><b>Supervisor:</b> Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales.</p>
         </div>
-      </article>
 
-      <!-- Investigación en curso: Adrián MT + eléctrica -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/INV_CONJUN_ADRIAN.png" alt="Inversión conjunta de datos de resistividad magnetotelúrica y eléctrica">
-        <div>
-          <h3>Aprendizaje profundo guiado por la física para la inversión conjunta de datos de resistividad magnetotelúrica y eléctrica</h3>
-          <p><b>Objetivo:</b> Desarrollar un enfoque de aprendizaje profundo guiado por la física para la inversión conjunta de datos de resistividad magnetotelúrica y eléctrica, mejorando la resolución y consistencia de los modelos del subsuelo.</p>
+        <!-- Investigación en curso: Adrián MT + eléctrica -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/INV_CONJUN_ADRIAN.png" alt="Inversión conjunta de datos de resistividad magnetotelúrica y eléctrica">
+          <h3>Aprendizaje profundo guiado por la física para inversión conjunta MT + resistividad eléctrica</h3>
+          <p><b>Objetivo:</b> Desarrollar un enfoque de aprendizaje profundo guiado por la física para la inversión conjunta de datos magnetotelúricos y eléctricos.</p>
           <p><b>En desarrollo por:</b> Est. Geol. Adrián Pérez.</p>
           <p><b>Supervisor:</b> Ph.D (c) Yesid Paul Goyes.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales.</p>
         </div>
-      </article>
-    </div>
+      </div>
+    </section>
 
-    <hr class="divider">
+    <!-- 🔹 FINALIZADAS (cards) -->
+    <section class="section" id="finalizadas" data-aos="fade-up">
+      <h2>Trabajos de grado e investigaciones finalizadas</h2>
 
-    <!-- FINALIZADAS -->
-    <h2>Trabajos de grado e investigaciones finalizadas</h2>
-
-    <div class="card-grid">
-      <!-- 1. Porosidad con IA (finalizada) -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/TESIS_NICOLAS.png" alt="Tesis Nicolás Córdoba">
-        <div>
-          <h3>Estimación de porosidad en yacimientos de hidrocarburos con IA usando sísmica post-apilado</h3>
+      <div class="cards">
+        <!-- 1. Porosidad con IA (finalizada) -->
+        <div class="card" data-aos="zoom-in">
+          <img src="images/TESIS_NICOLAS.png" alt="Tesis Nicolás Córdoba">
+          <h3>Estimación de porosidad con IA usando sísmica post-apilado</h3>
           <p><b>Tipo:</b> Tesis de maestría (finalizada)</p>
-          <p><b>Objetivo:</b> Estimar la porosidad en yacimientos de hidrocarburos con sísmica post-apilado mediante algoritmos de inteligencia artificial.</p>
+          <p><b>Objetivo:</b> Estimar la porosidad en yacimientos de hidrocarburos con datos sísmicos post-apilados mediante algoritmos de inteligencia artificial.</p>
           <p><b>Realizada por:</b> Msc. Nicolás Córdoba.</p>
           <p><b>Dirección:</b> Ph.D (c) Yesid Goyes y Ph.D (c) Leidy Castro.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales, Procesamiento y modelamiento sísmico.</p>
         </div>
-      </article>
 
-      <!-- 2. Segmentación de fallas (finalizada) -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/TESIS_ALVARO.jpg" alt="Tesis Álvaro Ascanio">
-        <div>
+        <!-- 2. Segmentación de fallas (finalizada) -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/TESIS_ALVARO.jpg" alt="Tesis Álvaro Ascanio">
           <h3>Segmentación de fallas geológicas en sísmica ruidosa con CNNs</h3>
           <p><b>Tipo:</b> Tesis de pregrado (finalizada)</p>
-          <p><b>Objetivo:</b> Evaluar la influencia del ruido sísmico en la segmentación de fallas geológicas mediante redes neuronales convolucionales con mecanismos de atención.</p>
+          <p><b>Objetivo:</b> Evaluar la influencia del ruido sísmico en la segmentación de fallas mediante redes neuronales convolucionales con mecanismos de atención.</p>
           <p><b>Realizada por:</b> Est. Geol. Álvaro Ascanio.</p>
           <p><b>Dirección:</b> Ph.D (c) Yesid Goyes y Msc. Geol. Ana Mantilla.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales.</p>
         </div>
-      </article>
 
-      <!-- 3. Integración multifísica (finalizada) -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/SurveyMT.png" alt="Tesis Daniela Quintero">
-        <div>
-          <h3>Integración multifísica para corrección de desplazamiento estático en métodos eléctricos</h3>
+        <!-- 3. Integración multifísica (finalizada) -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/SurveyMT.png" alt="Tesis Daniela Quintero">
+          <h3>Integración multifísica para corrección de desplazamiento estático</h3>
           <p><b>Tipo:</b> Tesis de pregrado (finalizada)</p>
           <p><b>Objetivo:</b> Integrar SEV, SEDT y MT mediante un enfoque multifísico para corregir desplazamiento estático y disminuir la incertidumbre en modelos del subsuelo.</p>
           <p><b>Realizada por:</b> Geóloga Daniela Quintero.</p>
           <p><b>Dirección:</b> Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
         </div>
-      </article>
 
-      <!-- 4. Gravimetría 3D Cerro Machín (finalizada) -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/MODELO_GABRIEL.jpg" alt="Modelo gravimétrico Cerro Machín">
-        <div>
-          <h3>Modelamiento e inversión de anomalías gravimétricas 3D: volcán Cerro Machín</h3>
+        <!-- 4. Gravimetría 3D Cerro Machín (finalizada) -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <img src="images/MODELO_GABRIEL.jpg" alt="Modelo gravimétrico Cerro Machín">
+          <h3>Modelamiento e inversión gravimétrica 3D del volcán Cerro Machín</h3>
           <p><b>Tipo:</b> Investigación (finalizada)</p>
           <p><b>Objetivo:</b> Modelar el área geotérmica del volcán Cerro Machín a partir de estudios previos y obtener modelos mediante inversión gravimétrica.</p>
           <p><b>Realizada por:</b> Est. Geol. Gabriel Moreno.</p>
           <p><b>Dirección:</b> Ph.D Sait Khurama y Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
         </div>
-      </article>
 
-      <!-- 5. Inversión conjunta SEV + SEDT (finalizada) -->
-      <article class="project-card" data-aos="fade-up">
-        <img src="images/INV_CONJUNTA.jpg" alt="Inversión conjunta SEV y SEDT">
-        <div>
+        <!-- 5. Inversión conjunta SEV + SEDT (finalizada) -->
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+          <img src="images/INV_CONJUNTA.jpg" alt="Inversión conjunta SEV y SEDT">
           <h3>Inversión conjunta de modelos geoeléctricos SEV + SEDT</h3>
           <p><b>Tipo:</b> Investigación (finalizada)</p>
           <p><b>Objetivo:</b> Desarrollar y evaluar inversión conjunta de datos geoeléctricos de SEV y SEDT para superar las limitaciones de inversiones independientes.</p>
@@ -220,8 +297,8 @@
           <p><b>Dirección:</b> Ph.D Sait Khurama y Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
         </div>
-      </article>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -232,99 +309,14 @@
     AOS.init({ duration: 1000, once: true });
   </script>
 
-  <!-- Estilo específico de esta página -->
-  <style>
-    html { scroll-behavior: smooth; }
-
-    body {
-      background-color: #071c1f;
-      color: #111;
-    }
-
-    h2, h3 {
-      color: #9ef01a;
-    }
-
-    .divider {
-      margin: 40px 0;
-      border: none;
-      border-top: 2px solid #ddd;
-    }
-
-    .research-block {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 32px;
-      background-color: #f8f8f8;
-      border-radius: 12px;
-      padding: 20px;
-    }
-
-    .research-img {
-      width: 260px;
-      height: 180px;
-      border-radius: 10px;
-      object-fit: cover;
-      flex-shrink: 0;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
-    }
-
-    .research-text h3 {
-      margin-top: 0;
-      color: #a00;
-    }
-
-    .research-text p {
-      margin: 6px 0;
-      text-align: justify;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      margin-top: 20px;
-    }
-
-    .project-card {
-      background-color: #f8f8f8;
-      border-radius: 12px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.12);
-    }
-
-    .project-card img {
-      width: 100%;
-      border-radius: 10px;
-      height: auto;
-      object-fit: contain;   /* muestra la imagen completa sin recortar */
-      max-height: 260px;     /* controla qué tan alta máximo puede ser en la tarjeta */
-    }
-
-    .project-card h3 {
-      margin: 8px 0;
-      color: #a00;
-    }
-
-    .project-card p {
-      margin: 4px 0;
-      text-align: justify;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .research-block {
-        flex-direction: column;
-      }
-
-      .research-img {
-        width: 100%;
-        height: 200px;
-      }
-    }
-  </style>
+  <!-- Menú hamburguesa -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
