@@ -13,33 +13,33 @@
 
   <!-- Iconos (para el menú hamburguesa, igual que en index) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- 🔧 FIX SOLO PARA CELULAR -->
-<style>
-  @media (max-width: 768px) {
+  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+  <style>
+    @media (max-width: 768px) {
 
-    .navbar {
-      position: relative !important;
-    }
+      .navbar {
+        position: relative !important;
+      }
 
-    #nav-menu {
-      position: absolute !important;
-      top: 100%;
-      left: 0;
-      right: 0;
-      display: none;
-      flex-direction: column;
-    }
+      #nav-menu {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+      }
 
-    #nav-menu.active {
-      display: flex !important;
-    }
+      #nav-menu.active {
+        display: flex !important;
+      }
 
-    .menu-toggle {
-      position: relative !important;
-      z-index: 9999 !important;
+      .menu-toggle {
+        position: relative !important;
+        z-index: 9999 !important;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -376,28 +376,46 @@
       border-radius: 10px;
     }
 
-    /* 📱 RESPONSIVE: ajustar sidebar y miembros en pantallas pequeñas */
+    /* 📱 RESPONSIVE SOLO MÓVIL/TABLET – aquí está el cambio */
     @media (max-width: 900px) {
+      body {
+        overflow-x: hidden; /* evita scroll horizontal en cel */
+      }
+
       .sidebar {
-        position: static;
-        width: 100%;
-        margin: 20px auto 10px;
+        position: static;       /* ya no fija */
+        left: 0;
+        right: 0;
+        width: auto;           /* se adapta al espacio */
+        margin: 20px 16px 10px;/* margen dentro de la pantalla */
       }
 
       main.section {
         margin-left: 0;
       }
 
-      .miembro {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .miembro {
+    flex-direction: column;
+    align-items: center !important;   /* 🔥 Centra horizontal */
+    text-align: center;               /* 🔥 Centra el texto */
+    gap: 15px;
+  }
 
-      .miembro img {
-        width: 130px;
-        height: 130px;
+  .miembro img {
+    display: block;
+    margin: 0 auto;                   /* 🔥 Centra horizontal */
+    width: 130px;
+    height: 130px;
+  }
+
+  .miembro div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;              /* 🔥 Centra vertical texto respecto a la foto */
+    justify-content: center;
       }
     }
   </style>
 </body>
 </html>
+

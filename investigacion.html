@@ -63,34 +63,59 @@
     .card b {
       color: #333;
     }
+
+    /* 🔹 Ajustes especiales para el HERO de Investigación */
+    .hero-investigacion {
+  height: 35vh;          /* Ajusta aquí: 30vh - 40vh */
+  min-height: 300px;     /* Para que no se haga muy chiquito */
+}
+    
+
+    @media (max-width: 768px) {
+      .hero-investigacion {
+        /* Para que en cel se vea como el de Contacto */
+        padding: 80px 20px !important;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 20px;
+        margin: 0 10px;
+        box-shadow: 0 0 40px rgba(0,0,0,0.25);
+      }
+
+      .hero-investigacion > div {
+        max-width: 650px !important;
+      }
+    }
   </style>
-  <!-- 🔧 FIX SOLO PARA CELULAR -->
-<style>
-  @media (max-width: 768px) {
 
-    .navbar {
-      position: relative !important;
-    }
+  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+  <style>
+    @media (max-width: 768px) {
 
-    #nav-menu {
-      position: absolute !important;
-      top: 100%;
-      left: 0;
-      right: 0;
-      display: none;
-      flex-direction: column;
-    }
+      .navbar {
+        position: relative !important;
+      }
 
-    #nav-menu.active {
-      display: flex !important;
-    }
+      #nav-menu {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+      }
 
-    .menu-toggle {
-      position: relative !important;
-      z-index: 9999 !important;
+      #nav-menu.active {
+        display: flex !important;
+      }
+
+      .menu-toggle {
+        position: relative !important;
+        z-index: 9999 !important;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 
 <body>
@@ -119,10 +144,9 @@
     </div>
   </header>
 
-  <!-- 🔹 HERO INVESTIGACIÓN (mismo estilo que Repositorio/Tutoriales/Publicaciones) -->
-  <section class="hero"
-    style="height: 40vh;
-           background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+  <!-- 🔹 HERO INVESTIGACIÓN (manteniendo tu diseño original) -->
+  <section class="hero hero-investigacion"
+    style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
                       url('https://i.postimg.cc/nVk0Bktq/Diseno-sin-titulo-2.png');
            background-size: cover;
            background-position: center center;
@@ -146,7 +170,7 @@
   <!-- CONTENIDO PRINCIPAL -->
   <main>
 
-    <!-- 🔹 LÍNEAS DE INVESTIGACIÓN (ahora en tarjetas) -->
+    <!-- 🔹 LÍNEAS DE INVESTIGACIÓN -->
     <section class="section" id="lineas" data-aos="fade-up">
       <h2>Líneas de Investigación</h2>
       <p>
@@ -201,7 +225,7 @@
       </div>
     </section>
 
-    <!-- 🔹 INVESTIGACIONES EN CURSO (cards) -->
+    <!-- 🔹 INVESTIGACIONES EN CURSO -->
     <section class="section alt" id="en-curso" data-aos="fade-up">
       <h2>Investigaciones en curso</h2>
 
@@ -238,7 +262,7 @@
       </div>
     </section>
 
-    <!-- 🔹 FINALIZADAS (cards) -->
+    <!-- 🔹 FINALIZADAS -->
     <section class="section" id="finalizadas" data-aos="fade-up">
       <h2>Trabajos de grado e investigaciones finalizadas</h2>
 

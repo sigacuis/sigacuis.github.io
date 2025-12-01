@@ -19,7 +19,6 @@
   <!-- 🔧 FIX SOLO PARA CELULAR (NO TOCA ESCRITORIO) -->
   <style>
     @media (max-width: 768px) {
-
       /* La navbar sirve de referencia en móvil */
       .navbar {
         position: relative !important;
@@ -31,8 +30,8 @@
         top: 100%;
         left: 0;
         right: 0;
-        display: none;              /* oculto inicialmente */
-        flex-direction: column;     /* se ve tipo lista vertical */
+        display: none;           /* oculto inicialmente */
+        flex-direction: column;  /* se ve tipo lista vertical */
       }
 
       /* Cuando se hace clic y se agrega .active, se muestra */
@@ -45,13 +44,34 @@
         position: relative !important;
         z-index: 9999 !important;
       }
+
+      /* 🎯 Ajuste hero en celular similar al contacto */
+      #inicio.hero {
+        padding: 80px 20px; /* un poco de espacio como en contacto */
+      }
+
+      #inicio .hero-content {
+        max-width: 650px;
+        margin: -120px auto 0;            /* lo sube como en contacto y centra */
+        text-align: center;
+        background: rgba(255, 255, 255, 0.85); /* recuadro blanco */
+        border-radius: 20px;
+        padding: 25px 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+      }
+
+      #inicio .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
     }
   </style>
-
 </head>
 
 <body>
-
   <!-- 🔹 NAVBAR -->
   <header class="navbar">
     <div class="logo">
@@ -97,31 +117,26 @@
     <p>
       Somos el <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>,
       conformado por estudiantes de Geología de la <strong>Universidad Industrial de Santander (UIS)</strong>.
-      Nuestro enfoque actual se centra en cuatro líneas de investigación: Aprendizaje automático y minería
-      de datos geocientíficos, geofísica somera aplicada a estudios del subsuelo, procesamiento y
-      modelamiento sísmico 2D y 3D, geociencias computacionales y simulación numérica. Buscamos fortalecer
-      las competencias en geología y geofísica aplicada, difundiendo el conocimiento mediante cursos,
-      talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis en la geofísica
-      computacional.
+      Nuestro enfoque actual se centra en cuatro líneas de investigación: Aprendizaje automático y minería de datos
+      geocientíficos, geofísica somera aplicada a estudios del subsuelo, procesamiento y modelamiento sísmico 2D y 3D,
+      geociencias computacionales y simulación numérica.
+      Buscamos fortalecer las competencias en geología y geofísica aplicada, difundiendo el conocimiento mediante cursos,
+      talleres, videotutoriales, exposición de pósters y salidas de campo con énfasis en la geofísica computacional.
     </p>
   </section>
 
   <!-- 🔹 NOTICIAS RECIENTES -->
   <section id="noticias" class="section alt" data-aos="fade-up">
     <h2>Noticias Recientes</h2>
-
     <div class="cards" style="justify-content:center;">
 
       <!-- Noticia 1 -->
       <div class="card" data-aos="zoom-in">
         <p><strong>Desde Instagram · Reciente</strong></p>
-
-        <iframe 
-          src="https://www.instagram.com/p/DNHDbyKSfDz/embed" 
-          width="100%" height="450" 
-          frameborder="0" scrolling="no" allowtransparency="true">
+        <iframe src="https://www.instagram.com/p/DNHDbyKSfDz/embed"
+                width="100%" height="450"
+                frameborder="0" scrolling="no" allowtransparency="true">
         </iframe>
-
         <a href="https://www.instagram.com/p/DNHDbyKSfDz/"
            target="_blank"
            class="btn-secondary"
@@ -133,14 +148,11 @@
       <!-- Noticia 2 -->
       <div class="card" data-aos="zoom-in" data-aos-delay="150">
         <p><strong>Desde Instagram · Reciente</strong></p>
-
-        <iframe 
-          src="https://www.instagram.com/p/DAr_kwYt7IE/embed" 
-          width="100%" height="450" 
-          frameborder="0" scrolling="no" allowtransparency="true">
+        <iframe src="https://www.instagram.com/p/DRQiqGhDfbA/embed"
+                width="100%" height="450"
+                frameborder="0" scrolling="no" allowtransparency="true">
         </iframe>
-
-        <a href="https://www.instagram.com/p/DAr_kwYt7IE/"
+        <a href="https://www.instagram.com/p/DRQiqGhDfbA/"
            target="_blank"
            class="btn-secondary"
            style="display:inline-block; margin-top:15px;">
@@ -151,14 +163,11 @@
       <!-- Noticia 3 -->
       <div class="card" data-aos="zoom-in" data-aos-delay="300">
         <p><strong>Desde Instagram · Reciente</strong></p>
-
-        <iframe 
-          src="https://www.instagram.com/p/DGOyjppOqQ-/embed"
-          width="100%" height="450"
-          frameborder="0" scrolling="no" allowtransparency="true">
+        <iframe src="https://www.instagram.com/p/DRqIMOSkgrj/embed"
+                width="100%" height="450"
+                frameborder="0" scrolling="no" allowtransparency="true">
         </iframe>
-
-        <a href="https://www.instagram.com/p/DGOyjppOqQ-/"
+        <a href="https://www.instagram.com/p/DRqIMOSkgrj/"
            target="_blank"
            class="btn-secondary"
            style="display:inline-block; margin-top:15px;">
@@ -198,16 +207,19 @@
   </footer>
 
   <script>
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
 
     // Menú hamburguesa
     const toggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+
     toggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       toggle.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>

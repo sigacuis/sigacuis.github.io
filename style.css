@@ -351,3 +351,59 @@ footer {
   width: 26px; height:3px;
   background:#b30000; border-radius:2px;
 }
+
+/* ====== FIX SOLO PARA CELULAR — NAVBAR AJUSTADA ====== */
+@media (max-width: 768px) {
+
+  /* Navbar bien alineada y ocupando todo el ancho */
+  .navbar {
+    padding: 0.6rem 1rem !important;
+    justify-content: space-between !important;
+  }
+
+  /* Solo mostrar el logo (esconde el texto largo) */
+  .logo-text {
+    display: none !important;
+  }
+
+  .logo img {
+    height: 38px !important;
+    width: auto !important;
+  }
+
+  /* Botón hamburguesa siempre visible */
+  .menu-toggle {
+    display: block !important;
+    z-index: 9999 !important;
+    font-size: 1.8rem !important;
+  }
+
+  /* Ajustar menú desplegable */
+  .navbar nav {
+    width: 100% !important;
+    position: absolute !important;
+    top: 65px !important;
+    right: 0 !important;
+    background: #fff !important;
+    flex-direction: column !important;
+    display: none;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 999;
+  }
+
+  .navbar nav.active {
+    display: flex !important;
+  }
+
+  .navbar nav a {
+    padding: 1rem 0 !important;
+    width: 100% !important;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* ✅ Evitar que la navbar se salga en pantallas pequeñas */
+.navbar {
+  box-sizing: border-box;
+}

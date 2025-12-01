@@ -16,7 +16,7 @@
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Ajuste de imágenes en cards -->
+  <!-- Ajuste de imágenes en cards + HERO -->
   <style>
     .section .card img,
     .section.alt .card img {
@@ -32,34 +32,59 @@
     .section.alt .card img:hover {
       transform: scale(1.03);
     }
+
+    /* 🔹 HERO Tutoriales – altura en PC */
+    .hero-tutoriales {
+      height: 35vh;
+      min-height: 300px;
+    }
+
+    /* 🔹 Ajuste SOLO para celular (hero tipo tarjeta) */
+    @media (max-width: 768px) {
+      .hero-tutoriales {
+        height: auto;
+        padding: 80px 20px !important;
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 20px;
+        margin: 0 10px;
+        box-shadow: 0 0 40px rgba(0,0,0,0.25);
+      }
+
+      .hero-tutoriales > div {
+        max-width: 650px !important;
+      }
+    }
   </style>
-  <!-- 🔧 FIX SOLO PARA CELULAR -->
-<style>
-  @media (max-width: 768px) {
 
-    .navbar {
-      position: relative !important;
-    }
+  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+  <style>
+    @media (max-width: 768px) {
 
-    #nav-menu {
-      position: absolute !important;
-      top: 100%;
-      left: 0;
-      right: 0;
-      display: none;
-      flex-direction: column;
-    }
+      .navbar {
+        position: relative !important;
+      }
 
-    #nav-menu.active {
-      display: flex !important;
-    }
+      #nav-menu {
+        position: absolute !important;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+      }
 
-    .menu-toggle {
-      position: relative !important;
-      z-index: 9999 !important;
+      #nav-menu.active {
+        display: flex !important;
+      }
+
+      .menu-toggle {
+        position: relative !important;
+        z-index: 9999 !important;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 <body>
 
@@ -89,9 +114,8 @@
   </header>
 
   <!-- 🔹 HERO TUTORIALES -->
-  <section class="hero"
-    style="height: 40vh;
-           background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://i.postimg.cc/nVk0Bktq/Diseno-sin-titulo-2.png');
+  <section class="hero hero-tutoriales"
+    style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://i.postimg.cc/nVk0Bktq/Diseno-sin-titulo-2.png');
            background-size: cover;
            background-position: center center;
            background-attachment: fixed;
