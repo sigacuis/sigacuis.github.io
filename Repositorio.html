@@ -16,7 +16,14 @@
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Estilos específicos -->
   <style>
+    /* asegúrate de que nada se pase del ancho */
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     .section.alt .card img {
       width: 100%;
       height: 220px;
@@ -30,12 +37,17 @@
       transform: scale(1.03);
     }
 
+    #video-repo {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
     #video-repo:hover {
       transform: scale(1.05);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     }
 
-    /* 🔹 HERO Repositorio – altura en PC */
+    /* 🔹 HERO Repositorio – altura en PC (igual que Publicaciones) */
     .hero-repositorio {
       height: 35vh;
       min-height: 300px;
@@ -57,33 +69,25 @@
       .hero-repositorio > div {
         max-width: 650px !important;
       }
+
+      /* el video ocupa el ancho y no se sale */
+      #video-repo {
+        width: 100% !important;
+      }
+
+      /* en móvil quitamos el scale para que no genere scroll lateral al tocar */
+      #video-repo:hover {
+        transform: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      }
     }
   </style>
 
-  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+   <!-- 🔧 FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
   <style>
     @media (max-width: 768px) {
-
-      .navbar {
-        position: relative !important;
-      }
-
-      #nav-menu {
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-      }
-
-      #nav-menu.active {
-        display: flex !important;
-      }
-
-      .menu-toggle {
-        position: relative !important;
-        z-index: 9999 !important;
+      body {
+        padding-top: 60px;  /* para que nada se esconda bajo la navbar fija */
       }
     }
   </style>
@@ -144,7 +148,7 @@
     <h2>Acceso al Repositorio</h2>
     <p>Consulta los pasos para acceder correctamente a los datos alojados en nuestro repositorio institucional.</p>
 
-    <video id="video-repo" controls width="80%" style="border-radius: 10px; margin-top: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer;">
+    <video id="video-repo" controls width="80%" style="border-radius: 10px; margin-top: 20px;">
       <source src="images/CÓMO ACCEDER AL REPOSITORIO.mp4" type="video/mp4">
     </video>
   </section>
@@ -237,5 +241,31 @@
       toggle.classList.toggle('active');
     });
   </script>
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Mostrar / ocultar botón
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll suave hacia arriba
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
+

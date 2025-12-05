@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* Quitar recuadro pequeño */
+    /* Quitar recuadro pequeño (solo deja el contenido) */
     .contact-box {
       background: none !important;
       border: none !important;
@@ -72,7 +72,7 @@
       transform: translateY(-3px);
     }
 
-    /* 🔥 SUBIR EL RECUADRO DE LA INFO */
+    /* SUBIR EL RECUADRO DE LA INFO EN ESCRITORIO */
     .hero-content {
       margin-top: -120px; 
     }
@@ -82,33 +82,60 @@
       margin-top: 40px;
     }
   </style>
-<!-- 🔧 FIX SOLO PARA CELULAR -->
-<style>
-  @media (max-width: 768px) {
 
-    .navbar {
-      position: relative !important;
-    }
+  <!-- 🔧 FIX SOLO PARA CELULAR (HERO IGUAL QUE INDEX, SIN TOCAR MENÚ) -->
+  <style>
+    @media (max-width: 768px) {
 
-    #nav-menu {
-      position: absolute !important;
-      top: 100%;
-      left: 0;
-      right: 0;
-      display: none;
-      flex-direction: column;
-    }
+      body {
+        padding-top: 60px;  /* para que el hero no se esconda bajo la navbar fija */
+      }
 
-    #nav-menu.active {
-      display: flex !important;
-    }
+      /* 🔥 HERO — tarjeta blanca tipo index */
+      .hero .hero-content {
+        margin-top: -90px !important;
+        background: rgba(255,255,255,0.8) !important;
+        padding: 26px 20px !important;
+        border-radius: 18px !important;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-shadow: 0 0 25px rgba(0,0,0,0.22) !important;
+      }
 
-    .menu-toggle {
-      position: relative !important;
-      z-index: 9999 !important;
+      /* 🔥 HERO — que no sea tan alta en móvil */
+      .hero {
+        height: auto !important;
+        min-height: 72vh !important;  /* mismo estilo que en index */
+        padding: 70px 20px 40px !important;
+        background-attachment: scroll !important;
+      }
+
+      /* Ajustes de texto en la tarjeta */
+      .contact-box {
+        padding: 0 !important;   /* ya hay padding en hero-content */
+        max-width: 100% !important;
+      }
+
+      .contact-box h2 {
+        font-size: 1.8rem;
+      }
+
+      .contact-box p {
+        font-size: 0.95rem;
+      }
+
+      /* Botones un poco más compactos */
+      .contact-buttons {
+        gap: 12px;
+      }
+
+      .contact-btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
     }
-  }
-</style>
+  </style>
 </head>
 
 <body>
@@ -138,7 +165,7 @@
     </div>
   </header>
 
-  <!-- 🔹 HERO ORIGINAL (sin cambios en color ni transparencia) -->
+  <!-- 🔹 HERO -->
   <section class="hero"
     style="background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
            url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieJzZkUBBRKKlpzD6akejtdOqyBP8EjQC9xkMAmf8WTv8N5q1bvXZeptXaeNcVHPh1UHgpRAWKKSSiR56HT3dYTk8yqc4081N827dp4zZ86Uzuyw5-eUX-dJpLV_2813qKrHaK8-twg5NKdImg1w7l9K6IV5JOOSTjMVjdhxdO4RTOboqEt5PeLm1khrbr/s4032/Image%20(3).jpeg');
@@ -206,11 +233,37 @@
 
     const toggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
+    toggle?.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       toggle.classList.toggle('active');
+      document.body.classList.toggle('menu-open');  // igual que en index / nosotros
     });
   </script>
 
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Mostrar / ocultar botón
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll suave hacia arriba
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>

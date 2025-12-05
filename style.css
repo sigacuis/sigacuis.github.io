@@ -30,6 +30,7 @@ a {
   align-items: center;
   padding: 0.8rem 3rem;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -70,7 +71,7 @@ a {
   color: #b30000;
 }
 
-/* ====== MENÚ HAMBURGUESA ====== */
+/* ====== MENÚ HAMBURGUESA (DESKTOP: OCULTO) ====== */
 .menu-toggle {
   display: none;
   font-size: 1.6rem;
@@ -80,30 +81,6 @@ a {
 
 .menu-toggle.active i {
   color: #111;
-}
-
-@media (max-width: 950px) {
-  .menu-toggle {
-    display: block;
-  }
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: white;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  nav.active {
-    display: flex;
-  }
-  nav a {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-  }
 }
 
 /* ====== HERO ====== */
@@ -140,7 +117,9 @@ a {
   margin-bottom: 2rem;
 }
 
-.btn-primary, .btn-secondary {
+/* ====== BOTONES ====== */
+.btn-primary,
+.btn-secondary {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   border-radius: 8px;
@@ -259,21 +238,20 @@ footer {
   transition: all 0.8s ease-in-out;
 }
 
-  .hero-content h2 {
-    font-size: 1.8rem;
-  }
+/* Pequeño ajuste si usas h2 dentro del hero */
+.hero-content h2 {
+  font-size: 1.8rem;
+}
 
-  .navbar nav {
+/* Centrar nav en desktop si se requiere */
+.navbar nav {
   flex: 1;
   text-align: center;
 }
 
 .navbar nav a {
-  display: inline-block;
+  display: inline-block;
 }
- 
-
-
 
 /* ====== TUTORIALES ====== */
 .section-header {
@@ -296,7 +274,7 @@ footer {
 }
 .badge.alt { background:#111; }
 
-.tutorial-grid{
+.tutorial-grid {
   margin: 0 auto;
   max-width: 1100px;
   display:grid;
@@ -304,7 +282,7 @@ footer {
   gap: 1.25rem;
 }
 
-.tutorial-card{
+.tutorial-card {
   background:#fff;
   border:1px solid #eee;
   border-radius: 16px;
@@ -313,12 +291,12 @@ footer {
   transition: transform .2s ease, box-shadow .2s ease;
   text-align:center;
 }
-.tutorial-card:hover{
+.tutorial-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 22px rgba(0,0,0,.12);
 }
 
-.tutorial-card .circle{
+.tutorial-card .circle {
   width:140px; height:140px;
   border-radius:50%;
   object-fit:cover;
@@ -327,10 +305,10 @@ footer {
   border: 3px solid rgba(179,0,0,.15);
 }
 
-.tutorial-card h4{ margin:.25rem 0 .25rem; color:#111; }
-.tutorial-card p{ color:#555; }
-.tutorial-card .tiny{ font-size:.95rem; }
-.tutorial-card .meta{
+.tutorial-card h4 { margin:.25rem 0 .25rem; color:#111; }
+.tutorial-card p { color:#555; }
+.tutorial-card .tiny { font-size:.95rem; }
+.tutorial-card .meta {
   display:inline-block;
   margin-top:.35rem;
   font-size:.75rem;
@@ -338,12 +316,12 @@ footer {
   font-weight:700;
 }
 
-/* marca del link activo en navbar */
-.navbar a.active{
+/* ====== LINK ACTIVO EN NAVBAR ====== */
+.navbar a.active {
   color:#b30000;
   position:relative;
 }
-.navbar a.active::after{
+.navbar a.active::after {
   content:"";
   position:absolute;
   left:0; right:0; bottom:-6px;
@@ -352,16 +330,16 @@ footer {
   background:#b30000; border-radius:2px;
 }
 
-/* ====== FIX SOLO PARA CELULAR — NAVBAR AJUSTADA ====== */
+/* ====== MENÚ MÓVIL TIPO "ACGGP" ====== */
 @media (max-width: 768px) {
 
-  /* Navbar bien alineada y ocupando todo el ancho */
+  /* Navbar compacta */
   .navbar {
     padding: 0.6rem 1rem !important;
     justify-content: space-between !important;
   }
 
-  /* Solo mostrar el logo (esconde el texto largo) */
+  /* Ocultar texto largo del logo en móvil */
   .logo-text {
     display: none !important;
   }
@@ -371,39 +349,89 @@ footer {
     width: auto !important;
   }
 
-  /* Botón hamburguesa siempre visible */
+  /* Mostrar hamburguesa */
   .menu-toggle {
     display: block !important;
-    z-index: 9999 !important;
+    z-index: 1201 !important;
     font-size: 1.8rem !important;
   }
 
-  /* Ajustar menú desplegable */
-  .navbar nav {
-    width: 100% !important;
-    position: absolute !important;
-    top: 65px !important;
+  /* Menú desplegable ocupando casi toda la pantalla */
+  #nav-menu {
+    position: fixed !important;
+    top: 60px !important;      /* debajo de la navbar */
+    left: 0 !important;
     right: 0 !important;
-    background: #fff !important;
-    flex-direction: column !important;
-    display: none;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    z-index: 999;
+    max-height: 64vh;          /* hasta el 65% de la altura de la pantalla */
+    overflow-y: auto;
+    background: #ffffff !important;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 1.75rem;
+    gap: 1rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: flex;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 1200;
   }
 
-  .navbar nav.active {
-    display: flex !important;
+  #nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
   }
 
-  .navbar nav a {
-    padding: 1rem 0 !important;
-    width: 100% !important;
+  #nav-menu a {
+    width: 100%;
+    text-align: left;
+    padding: 0.7rem 0;
+    font-size: 1.05rem;
     border-bottom: 1px solid #eee;
+  }
+
+  /* Quitar subrayado especial del activo en móvil si molesta */
+  .navbar a.active::after {
+    display: none;
+  }
+
+  /* Body sin scroll cuando el menú esté abierto (si añades .menu-open desde JS) */
+  body.menu-open {
+    overflow: hidden;
   }
 }
 
-/* ✅ Evitar que la navbar se salga en pantallas pequeñas */
-.navbar {
-  box-sizing: border-box;
+/* ====== BOTÓN SUBIR (SCROLL TO TOP) ====== */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1300;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#scrollTopBtn i {
+  font-size: 1.4rem;
+  color: #5c4dff;
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }

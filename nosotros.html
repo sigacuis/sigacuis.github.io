@@ -13,30 +13,11 @@
 
   <!-- Iconos (para el menú hamburguesa, igual que en index) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+   <!-- 🔧 FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
   <style>
     @media (max-width: 768px) {
-
-      .navbar {
-        position: relative !important;
-      }
-
-      #nav-menu {
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-      }
-
-      #nav-menu.active {
-        display: flex !important;
-      }
-
-      .menu-toggle {
-        position: relative !important;
-        z-index: 9999 !important;
+      body {
+        padding-top: 60px;  /* para que nada se esconda bajo la navbar fija */
       }
     }
   </style>
@@ -73,8 +54,8 @@
     <h3>Integrantes</h3>
     <ul>
       <li><a href="#docentes">Docentes</a></li>
+      <li><a href="#profesionales">Profesionales</a></li>
       <li><a href="#maestria">Estudiantes de Maestría</a></li>
-      <li><a href="#graduados">Graduados</a></li>
       <li><a href="#pregrado">Estudiantes de Pregrado</a></li>
     </ul>
   </aside>
@@ -92,15 +73,23 @@
       <h3>Docentes</h3>
 
       <div class="miembro">
-        <img src="thumbs/Saith_Kurama.png" alt="Sait Khurama Velasquez">
+        <img src="thumbs/Saith_Kurama.png" alt="Sait Khurama Velásquez">
         <div>
-          <h4><strong>Sait Khurama Velasquez</strong></h4>
+          <h4><strong>Sait Khurama Velásquez</strong></h4>
           <p>Geólogo con 30 años de experiencia en diferentes áreas del conocimiento geológico. Candidato a Doctor en Ciencias de la Tierra y del Universo. MSc. en Geofísica. Trece años como docente en la Universidad Industrial de Santander, donde ha sido director de la Escuela de Geología y coordinador de las Maestrías de Geología y Geofísica.</p>
-          <p><b>Email:</b> <a href="mailto:skhurama@uis.edu.co">skhurama@uis.edu.co</a></p>
-          <p>
-            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000629782">CvLAC</a> |
-            <a href="https://www.linkedin.com/in/saitkhurama/">LinkedIn</a> |
-            <a href="https://www.researchgate.net/profile/Sait-Khurama">ResearchGate</a>
+          <p><b>Email:</b> <span>skhurama@uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000629782" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/saitkhurama/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Sait-Khurama" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
           </p>
         </div>
       </div>
@@ -109,12 +98,92 @@
         <img src="thumbs/Paul_Goyes.png" alt="Yesid Paul Goyes Peñafiel">
         <div>
           <h4><strong>Yesid Paul Goyes Peñafiel</strong></h4>
-          <p>Geólogo con 10 años de experiencia. M.Sc. en Geofísica de la Universidad Estatal de Perm, Rusia. Candidato a Doctor en Ciencias de la Computación (UIS). Intereses: teoría inversa, adquisición y procesamiento sísmico, métodos potencial-EM y deep learning en geociencias.</p>
-          <p><b>Email:</b> <a href="mailto:yesid2198435@correo.uis.edu.co">yesid2198435@correo.uis.edu.co</a></p>
-          <p>
-            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001491610">CvLAC</a> |
-            <a href="https://www.linkedin.com/in/paul-goyes-0212b810/">LinkedIn</a> |
-            <a href="https://www.researchgate.net/profile/Paul-Goyes-Penafiel">ResearchGate</a>
+          <p>Geólogo con 10 años de experiencia en diferentes áreas del conocimiento geológico. M.Sc. en Geofísica de la Universidad Estatal de Perm, Rusia. Candidato a Doctor en Ciencias de la Computación (UIS). Intereses: teoría inversa, adquisición y procesamiento sísmico, métodos potencial-EM y deep learning en geosciencias.</p>
+          <p><b>Email:</b> <span>yesid2198435@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001491610" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/paul-goyes-0212b810/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Paul-Goyes-Penafiel" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- PROFESIONALES -->
+    <section id="profesionales" data-aos="fade-up">
+      <h3>Profesionales</h3>
+
+      <!-- 1. Nicolás -->
+      <div class="miembro">
+        <img src="thumbs/Nicolas_Cordoba.png" alt="Nicolás Córdoba Castillo">
+        <div>
+          <h4><strong>Nicolás Córdoba Castillo</strong></h4>
+          <p>Geólogo, M.Sc. en Geofísica, con experiencia en el sector O&amp;G, modelamiento petrofísico y machine learning aplicado a la geología. Investiga sobre la estimación de porosidad a partir de sísmica post-apilado.</p>
+          <p><b>Email:</b> <span>nicolas2228413@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://www.linkedin.com/in/geonicolascordoba/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Nicolas-Cordoba" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 2. Daniela -->
+      <div class="miembro">
+        <img src="thumbs/Daniela_Quintero.png" alt="Daniela Quintero Madariaga">
+        <div>
+          <h4><strong>Daniela Quintero Madariaga</strong></h4>
+          <p>Geóloga con intereses en Geofísica, Geociencias Computacionales y Geología Estructural. Dentro del semillero realizó su tesis de pregrado titulada <i>“Integración multifísica para la corrección del desplazamiento estático en métodos eléctricos y disminución de la incertidumbre en los modelos del subsuelo”</i>.</p>
+          <p><b>Email:</b> <span>daniela2202434@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/geodanielaquintero/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Daniela-Quintero-30" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. Gabriel -->
+      <div class="miembro">
+        <img src="thumbs/Gabriel_Moreno.jpg" alt="Gabriel Moreno Sánchez">
+        <div>
+          <h4><strong>Gabriel Moreno Sánchez</strong></h4>
+          <p>Geólogo con intereses en modelamiento de anomalías gravimétricas, gravimetría y geotermia. Participó en el proyecto <i>“Modelamiento e inversión de anomalías gravimétricas, caso de estudio: Volcán Cerro Machín”</i>.</p>
+          <p><b>Email:</b> <span>gabriel2210609@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002167003" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/gabriel-moreno-sanchez19/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Gabriel-Moreno-34?ev=hdr_xprf" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
           </p>
         </div>
       </div>
@@ -127,48 +196,19 @@
       <h3>Estudiantes de Maestría</h3>
 
       <div class="miembro">
-        <img src="thumbs/Nicolas_Cordoba.png" alt="Nicolas Cordoba Castillo">
-        <div>
-          <h4><strong>Nicolas Cordoba Castillo</strong></h4>
-          <p>Geólogo, estudiante de maestría en geofísica, con experiencia en el sector O&G, modelamiento petrofísico y machine learning aplicado a la geología. Investiga sobre la estimación de porosidad a partir de sísmica post-apilado.</p>
-          <p><b>Email:</b> <a href="mailto:nicolas2228413@correo.uis.edu.co">nicolas2228413@correo.uis.edu.co</a></p>
-          <p>
-            <a href="https://www.linkedin.com/in/geonicolascordoba/">LinkedIn</a> |
-            <a href="https://www.researchgate.net/profile/Nicolas-Cordoba">ResearchGate</a>
-          </p>
-        </div>
-      </div>
-
-      <div class="miembro">
         <img src="thumbs/Ana_Mantilla.png" alt="Ana Gabriela Mantilla Dulcey">
         <div>
           <h4><strong>Ana Gabriela Mantilla Dulcey</strong></h4>
           <p>Geóloga, estudiante de maestría en geofísica, interesada en geología de campo y computación aplicada a la exploración económica y geofísica. Trabaja en aprendizaje automático para inversión geofísica.</p>
-          <p><b>Email:</b> <a href="mailto:ana.mantilla@correo.uis.edu.co">ana.mantilla@correo.uis.edu.co</a></p>
-          <p>
-            <a href="https://www.linkedin.com/in/ana-gabriela-mantilla-24377a21a/">LinkedIn</a> |
-            <a href="https://www.researchgate.net/profile/Ana-Mantilla-Dulcey">ResearchGate</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divider">
-
-    <!-- GRADUADOS -->
-    <section id="graduados" data-aos="fade-up">
-      <h3>Graduados</h3>
-
-      <div class="miembro">
-        <img src="thumbs/Daniela_Quintero.png" alt="Daniela Quintero Madariaga">
-        <div>
-          <h4><strong>Daniela Quintero Madariaga</strong></h4>
-          <p>Recién graduada con intereses en Geofísica, Geociencias Computacionales y Geología Estructural. Dentro del semillero realizó su tesis de pregrado titulada <i>“Integración multifísica para la corrección del desplazamiento estático en métodos eléctricos y disminución de la incertidumbre en los modelos del subsuelo”</i>.</p>
-          <p><b>Email:</b> <a href="mailto:daniela2202434@correo.uis.edu.co">daniela2202434@correo.uis.edu.co</a></p>
-          <p>
-            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758">CvLAC</a> |
-            <a href="https://www.linkedin.com/in/ge%C3%B3logadanielaquintero/">LinkedIn</a> |
-            <a href="https://www.researchgate.net/profile/Daniela-Quintero-30">ResearchGate</a>
+          <p><b>Email:</b> <span>ana.mantilla@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://www.linkedin.com/in/ana-gabriela-mantilla-24377a21a/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Ana-Mantilla-Dulcey" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
           </p>
         </div>
       </div>
@@ -181,20 +221,24 @@
       <h3>Estudiantes de Pregrado</h3>
 
       <div class="miembro">
-        <img src="thumbs/Gabriel_Moreno.jpg" alt="Gabriel Moreno Sánchez">
-        <div>
-          <h4><strong>Gabriel Moreno Sánchez</strong></h4>
-          <p>Estudiante de geología de octavo semestre con intereses en modelamiento de anomalías gravimétricas, gravimetría y geotermia. Trabaja en el proyecto <i>“Modelamiento e inversión de anomalías gravimétricas, caso de estudio: Volcán Cerro Machín”</i>.</p>
-          <p><b>Email:</b> <a href="mailto:gabriel2210609@correo.uis.edu.co">gabriel2210609@correo.uis.edu.co</a></p>
-        </div>
-      </div>
-
-      <div class="miembro">
-        <img src="thumbs/Adrian_Perez.png" alt="Adrian Alvercy Pérez Montejo">
+        <img src="thumbs/Adrian_Perez.png" alt="Adrián Alvercy Pérez Montejo">
         <div>
           <h4><strong>Adrián Alvercy Pérez Montejo</strong></h4>
           <p>Estudiante de geología de séptimo semestre con intereses en geofísica, geología estructural e hidrogeología. Participa en el proyecto <i>“Aprendizaje profundo guiado por la física para la inversión no supervisada de sondeos eléctricos verticales”</i>.</p>
-          <p><b>Email:</b> <a href="mailto:adrian2212481@correo.uis.edu.co">adrian2212481@correo.uis.edu.co</a></p>
+          <p><b>Email:</b> <span>adrian2212481@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002192049" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/adrian-alvercy-perez-montejo-b44641300/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Adrian-Perez-Montejo?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJwcm9maWxlIiwicHJldmlvdXNQYWdlIjoiaG9tZSJ9fQ" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
         </div>
       </div>
 
@@ -207,25 +251,44 @@
             Actualmente desarrolla su tesis de pregrado titulada
             <i>“Estimación de modelos de velocidad mediante aprendizaje profundo no supervisado guiado por la física”</i>.
           </p>
-          <p><b>Email:</b> <a href="mailto:kevin24di30@gmail.com">kevin24di30@gmail.com</a></p>
+          <p><b>Email:</b> <span>kevin2211691@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002360623" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/kevintarazonab/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Kevin-Tarazona?ev=hdr_xprf&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InByb2ZpbGUiLCJwYWdlIjoiaG9tZSIsInBvc2l0aW9uIjoiZ2xvYmFsSGVhZGVyIn19" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
         </div>
       </div>
 
       <div class="miembro">
         <img src="thumbs/Sebastian_Blanco.png" alt="Jhoan Blanco">
         <div>
-          <h4><strong>Jhoan Blanco</strong></h4>
+          <h4><strong>Jhoan Sebastian Blanco Galvis</strong></h4>
           <p>Estudiante de geología de octavo semestre con intereses: Geofísica, Geociencias Computacionales, Geología económica. Dentro del semillero se encuentra trabajando en el proyecto "implementación de algoritmos de aprendizaje automático supervisado en mapeos de prospectividad mineral".</p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002360665" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/jhoan-sebastian-blanco-galvis/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Jhoan-Blanco-Galvis?ev=hdr_xprf" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
         </div>
       </div>
 
-      <div class="miembro">
-        <img src="thumbs/Juliana_Chacón.png" alt="Maria Juliana Chacon">
-        <div>
-          <h4><strong>María Juliana Chacón</strong></h4>
-          <p>Estudiante de geología con interés en geociencias computacionales, modelamiento estructural y simulación geofísica aplicada a la exploración de recursos naturales.</p>
-        </div>
-      </div>
     </section>
   </main>
 
@@ -261,10 +324,12 @@
       color: #b30000;
     }
 
+    /* 🔹 Nombres con gris suave y negrilla, tipografía igual al texto */
     h4 {
-      color: #333;
+      color: #555;
       margin-bottom: 8px;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 1rem;
     }
 
     .divider {
@@ -303,6 +368,15 @@
       text-align: justify;
     }
 
+    .miembro p.links {
+      text-align: left;
+    }
+
+    .miembro b {
+      color: #222;
+      font-weight: 700;
+    }
+
     .miembro a {
       color: #000;
       font-weight: normal;
@@ -310,7 +384,30 @@
     }
 
     .miembro a:hover {
-      text-decoration: underline;
+      text-decoration: none;
+      color: #b30000;
+    }
+
+    .miembro a:active,
+    .miembro a:focus {
+      text-decoration: none;
+      outline: none;
+    }
+
+    .miembro p.links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+    }
+
+    .miembro p.links span {
+      margin: 0 4px;
+      color: #555;
+    }
+
+    .miembro p.links i {
+      font-size: 0.95rem;
     }
 
     /* Barra lateral – versión escritorio */
@@ -368,7 +465,7 @@
     /* Recuadros de cada bloque */
     #docentes,
     #maestria,
-    #graduados,
+    #profesionales,
     #pregrado {
       background-color: #f8f8f8;
       color: #111;
@@ -376,46 +473,75 @@
       border-radius: 10px;
     }
 
-    /* 📱 RESPONSIVE SOLO MÓVIL/TABLET – aquí está el cambio */
+    /* 📱 RESPONSIVE SOLO MÓVIL/TABLET */
     @media (max-width: 900px) {
       body {
-        overflow-x: hidden; /* evita scroll horizontal en cel */
+        overflow-x: hidden;
       }
 
       .sidebar {
-        position: static;       /* ya no fija */
+        position: static;
         left: 0;
         right: 0;
-        width: auto;           /* se adapta al espacio */
-        margin: 20px 16px 10px;/* margen dentro de la pantalla */
+        width: auto;
+        margin: 20px 16px 10px;
       }
 
       main.section {
         margin-left: 0;
       }
 
-  .miembro {
-    flex-direction: column;
-    align-items: center !important;   /* 🔥 Centra horizontal */
-    text-align: center;               /* 🔥 Centra el texto */
-    gap: 15px;
-  }
+      .miembro {
+        flex-direction: column;
+        align-items: center !important;
+        text-align: center;
+        gap: 15px;
+      }
 
-  .miembro img {
-    display: block;
-    margin: 0 auto;                   /* 🔥 Centra horizontal */
-    width: 130px;
-    height: 130px;
-  }
+      .miembro img {
+        display: block;
+        margin: 0 auto;
+        width: 130px;
+        height: 130px;
+      }
 
-  .miembro div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;              /* 🔥 Centra vertical texto respecto a la foto */
-    justify-content: center;
+      .miembro div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .miembro p.links {
+        text-align: center;
       }
     }
   </style>
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Mostrar / ocultar botón
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll suave hacia arriba
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
 

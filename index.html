@@ -16,59 +16,71 @@
   <!-- Iconos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- 🔧 FIX SOLO PARA CELULAR (NO TOCA ESCRITORIO) -->
+  <!-- 🔧 FIX GLOBAL: evitar scroll lateral -->
+  <style>
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Ajuste del hero en escritorio + base */
+    #inicio .hero-content {
+      margin-top: -120px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+
+    <!-- 🔧 FIX SOLO PARA CELULAR (HERO + TIPOGRAFÍA) -->
   <style>
     @media (max-width: 768px) {
-      /* La navbar sirve de referencia en móvil */
-      .navbar {
-        position: relative !important;
+
+      body {
+        padding-top: 60px;  /* para que no se esconda bajo la navbar fija */
       }
 
-      /* Menú oculto por defecto en móvil */
-      #nav-menu {
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;           /* oculto inicialmente */
-        flex-direction: column;  /* se ve tipo lista vertical */
-      }
-
-      /* Cuando se hace clic y se agrega .active, se muestra */
-      #nav-menu.active {
-        display: flex !important;
-      }
-
-      /* Botón hamburguesa por encima del menú */
-      .menu-toggle {
-        position: relative !important;
-        z-index: 9999 !important;
-      }
-
-      /* 🎯 Ajuste hero en celular similar al contacto */
-      #inicio.hero {
-        padding: 80px 20px; /* un poco de espacio como en contacto */
-      }
-
+      /* 🔥 HERO — tarjeta blanca en móvil */
       #inicio .hero-content {
-        max-width: 650px;
-        margin: -120px auto 0;            /* lo sube como en contacto y centra */
-        text-align: center;
-        background: rgba(255, 255, 255, 0.85); /* recuadro blanco */
-        border-radius: 20px;
-        padding: 25px 20px;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+        margin-top: -90px !important;
+        background: rgba(255,255,255,0.8) !important;
+        padding: 26px 20px !important;
+        border-radius: 18px !important;
+        max-width: 90% !important;
+        box-shadow: 0 0 25px rgba(0,0,0,0.22) !important;
       }
 
-      #inicio .hero-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
+      /* 🔥 HERO — que no sea tan alta en móvil */
+      #inicio.hero {
+        height: auto !important;
+        min-height: 72vh !important;
+        padding: 70px 20px 40px !important;
+      }
+
+      /* Título más pequeño */
+      #inicio h1 {
+        font-size: 1.55rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+      }
+
+      /* Párrafo reducido */
+      #inicio p {
+        font-size: 0.95rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 18px !important;
+      }
+
+      /* Botones compactos */
+      #inicio .hero-buttons a {
+        padding: 10px 18px !important;
+        font-size: 0.9rem !important;
+        border-radius: 8px !important;
       }
     }
   </style>
+
+
 </head>
 
 <body>
@@ -84,7 +96,7 @@
 
     <!-- Menú -->
     <nav id="nav-menu">
-      <a href="index.html">Inicio</a>
+      <a href="index.html" class="active">Inicio</a>
       <a href="nosotros.html">Nosotros</a>
       <a href="Repositorio.html">Repositorio</a>
       <a href="tutoriales.html">Tutoriales</a>
@@ -99,14 +111,26 @@
     </div>
   </header>
 
-  <!-- 🔹 HERO -->
-  <section id="inicio" class="hero">
+  <!-- 🔹 HERO con mismo diseño que CONTACTO -->
+  <section id="inicio" class="hero"
+    style="background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+           url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEieJzZkUBBRKKlpzD6akejtdOqyBP8EjQC9xkMAmf8WTv8N5q1bvXZeptXaeNcVHPh1UHgpRAWKKSSiR56HT3dYTk8yqc4081N827dp4zZ86Uzuyw5-eUX-dJpLV_2813qKrHaK8-twg5NKdImg1w7l9K6IV5JOOSTjMVjdhxdO4RTOboqEt5PeLm1khrbr/s4032/Image%20(3).jpeg');
+           background-size: cover;
+           background-position: center;
+           background-attachment: fixed;
+           text-align: center;
+           padding: 80px 20px;
+           border-radius: 20px;
+           backdrop-filter: blur(10px);
+           box-shadow: 0 0 40px rgba(0,0,0,0.25);">
+
     <div class="hero-content" data-aos="fade-up">
       <h1>Geofísica Aplicada y Computacional</h1>
-      <p>Modelamiento directo, inversión geofísica, Inteligencia artificial aplicada a las geociencias</p>
+      <p>Modelamiento directo, inversión geofísica e inteligencia artificial aplicada a las geociencias</p>
+
       <div class="hero-buttons">
-        <a href="repositorio.html" class="btn-primary">Repositorio de datos</a>
-        <a href="#contacto" class="btn-secondary">Contáctanos</a>
+        <a href="Repositorio.html" class="btn-primary">Repositorio de datos</a>
+        <a href="contacto.html" class="btn-secondary">Contáctanos</a>
       </div>
     </div>
   </section>
@@ -125,7 +149,7 @@
     </p>
   </section>
 
-  <!-- 🔹 NOTICIAS RECIENTES -->
+  <!-- 🔹 NOTICIAS RECIENTES (SE MANTIENE IGUAL) -->
   <section id="noticias" class="section alt" data-aos="fade-up">
     <h2>Noticias Recientes</h2>
     <div class="cards" style="justify-content:center;">
@@ -219,6 +243,31 @@
     toggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
       toggle.classList.toggle('active');
+    });
+  </script>
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Mostrar / ocultar botón
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll suave hacia arriba
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   </script>
 </body>

@@ -89,30 +89,11 @@
     }
   </style>
 
-  <!-- 🔧 FIX SOLO PARA CELULAR (navbar) -->
+   <!-- 🔧 FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
   <style>
     @media (max-width: 768px) {
-
-      .navbar {
-        position: relative !important;
-      }
-
-      #nav-menu {
-        position: absolute !important;
-        top: 100%;
-        left: 0;
-        right: 0;
-        display: none;
-        flex-direction: column;
-      }
-
-      #nav-menu.active {
-        display: flex !important;
-      }
-
-      .menu-toggle {
-        position: relative !important;
-        z-index: 9999 !important;
+      body {
+        padding-top: 60px;  /* para que nada se esconda bajo la navbar fija */
       }
     }
   </style>
@@ -342,5 +323,31 @@
       toggle.classList.toggle('active');
     });
   </script>
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Mostrar / ocultar botón
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+      } else {
+        scrollBtn.classList.remove('show');
+      }
+    });
+
+    // Scroll suave hacia arriba
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
+
