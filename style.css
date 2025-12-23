@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  color: #222;
+  color: #221e1e;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 3rem;
+  padding: 0.9rem 3rem;
   z-index: 1000;
   box-sizing: border-box;
 }
@@ -46,13 +46,13 @@ a {
 
 .logo-text .nombre {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 0.90rem;
   color: #b30000;
-}
+} 
 
 .logo-text .semillero {
   font-size: 0.75rem;
-  color: #666;
+  color: #282525;
 }
 
 .navbar nav {
@@ -70,6 +70,8 @@ a {
 .navbar nav a:hover {
   color: #b30000;
 }
+
+
 
 /* ====== MENÚ HAMBURGUESA (DESKTOP: OCULTO) ====== */
 .menu-toggle {
@@ -306,7 +308,7 @@ footer {
 }
 
 .tutorial-card h4 { margin:.25rem 0 .25rem; color:#111; }
-.tutorial-card p { color:#555; }
+.tutorial-card p { color:#b30000; }
 .tutorial-card .tiny { font-size:.95rem; }
 .tutorial-card .meta {
   display:inline-block;
@@ -401,7 +403,13 @@ footer {
   body.menu-open {
     overflow: hidden;
   }
+
+  /* 🔥 FIX CLAVE — SOLO CELULAR */
+  .logo {
+    min-width: 0 !important;
+  }
 }
+
 
 /* ====== BOTÓN SUBIR (SCROLL TO TOP) ====== */
 #scrollTopBtn {
@@ -434,4 +442,9 @@ footer {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+/* Mantener espacio del logo para que el menú quede centrado */
+.logo {
+  min-width: 410px; /* Ajusta si quieres más o menos espacio */
 }

@@ -64,12 +64,24 @@
       color: #333;
     }
 
+    /* ✅ CAMBIO: SOLO para que en "Trabajos de grado" el botón quede abajo y centrado */
+    #finalizadas .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    #finalizadas .card .btn-secondary {
+      margin-top: auto;
+      align-self: center;
+      display: inline-block;
+    }
+
     /* 🔹 Ajustes especiales para el HERO de Investigación */
     .hero-investigacion {
-  height: 35vh;          /* Ajusta aquí: 30vh - 40vh */
-  min-height: 300px;     /* Para que no se haga muy chiquito */
-}
-    
+      height: 35vh;          /* Ajusta aquí: 30vh - 40vh */
+      min-height: 300px;     /* Para que no se haga muy chiquito */
+    }
 
     @media (max-width: 768px) {
       .hero-investigacion {
@@ -105,8 +117,8 @@
     <div class="logo">
       <img src="logo_sigac.png" alt="Logo SIGAC">
       <div class="logo-text">
-        <span class="nombre">SIGAC</span><br>
-        <span class="semillero">Semillero de Investigación en Geofísica Aplicada y Computacional</span>
+        <span class="nombre">Semillero de investigación</span><br>
+        <span class="semillero">en Geofísica Aplicada y Computacional</span>
       </div>
     </div>
     <nav id="nav-menu">
@@ -217,7 +229,7 @@
           <h3>Estimación de modelos de velocidad mediante aprendizaje profundo no supervisado guiado por la física</h3>
           <p><b>Objetivo:</b> Estimar modelos de velocidad mediante un enfoque de aprendizaje profundo no supervisado guiado por principios físicos.</p>
           <p><b>En desarrollo por:</b> Est. Geol. Kevin Tarazona.</p>
-          <p><b>Supervisor:</b> Ph.D (c) Yesid Paul Goyes.</p>
+          <p><b>Supervisor:</b> Ph.D (c) Yesid Paul Goyes y Msc. Geol. Ana Mantilla.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales, Procesamiento y modelamiento sísmico.</p>
         </div>
         
@@ -245,7 +257,7 @@
 
     <!-- 🔹 FINALIZADAS -->
     <section class="section" id="finalizadas" data-aos="fade-up">
-      <h2>Trabajos de grado e investigaciones finalizadas</h2>
+      <h2>Trabajos de grado</h2>
 
       <div class="cards">
         <!-- 1. Porosidad con IA (finalizada) -->
@@ -257,6 +269,7 @@
           <p><b>Realizada por:</b> Msc. Nicolás Córdoba.</p>
           <p><b>Dirección:</b> Ph.D (c) Yesid Goyes y Ph.D (c) Leidy Castro.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales, Procesamiento y modelamiento sísmico.</p>
+          <a href="https://noesis.uis.edu.co/items/2121bec0-da25-47c0-9087-c8dbe6a724a3" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver trabajo</a>
         </div>
 
         <!-- 2. Segmentación de fallas (finalizada) -->
@@ -268,6 +281,7 @@
           <p><b>Realizada por:</b> Est. Geol. Álvaro Ascanio.</p>
           <p><b>Dirección:</b> Ph.D (c) Yesid Goyes y Msc. Geol. Ana Mantilla.</p>
           <p><b>Línea:</b> Aprendizaje automático, Geociencias computacionales.</p>
+          <a href="https://noesis.uis.edu.co/items/e7e96997-377e-493d-9ba7-138dc7afbef3" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver trabajo</a>
         </div>
 
         <!-- 3. Integración multifísica (finalizada) -->
@@ -277,30 +291,35 @@
           <p><b>Tipo:</b> Tesis de pregrado (finalizada)</p>
           <p><b>Objetivo:</b> Integrar SEV, SEDT y MT mediante un enfoque multifísico para corregir desplazamiento estático y disminuir la incertidumbre en modelos del subsuelo.</p>
           <p><b>Realizada por:</b> Geóloga Daniela Quintero.</p>
-          <p><b>Dirección:</b> Ph.D (c) Yesid Goyes.</p>
+          <p><b>Dirección:</b> Ph.D (c) Yesid Goyes y Ms. Efrain Laverde.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
+          <a href="https://noesis.uis.edu.co/items/8338ad70-4f61-449b-804e-b8ef32fcd338" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver trabajo</a>
         </div>
 
         <!-- 4. Gravimetría 3D Cerro Machín (finalizada) -->
         <div class="card" data-aos="zoom-in" data-aos-delay="300">
-          <img src="images/MODELO_GABRIEL.jpg" alt="Modelo gravimétrico Cerro Machín">
-          <h3>Modelamiento e inversión gravimétrica 3D del volcán Cerro Machín</h3>
-          <p><b>Tipo:</b> Investigación (finalizada)</p>
-          <p><b>Objetivo:</b> Modelar el área geotérmica del volcán Cerro Machín a partir de estudios previos y obtener modelos mediante inversión gravimétrica.</p>
+          <img src="images/publications_230824b.jpg" alt="Modelo gravimétrico Cerro Machín">
+          <h3>Inversión gravimétrica 3D con inicialización adaptativa y regularización secuencial: Un caso de estudio del Área Geotermica de Cerro Machín</h3>
+          <p><b>Tipo:</b> Tesis de pregrado (finalizada)</p>
+          <p><b>Objetivo:</b> Desarrollar una metodología de inversión gravimétrica tridimensional basada en regularización secuencial y en la construcción de modelos iniciales guiados por información geológica y geofísica a priori, con el fin de obtener un modelo cuantitativo de densidad que permita delimitar e interpretar los elementos prospectivos del sistema geotérmico del Área Geotérmica de Cerro Machín.
+</p>
           <p><b>Realizada por:</b> Est. Geol. Gabriel Moreno.</p>
-          <p><b>Dirección:</b> Ph.D Sait Khurama y Ph.D (c) Yesid Goyes.</p>
+          <p><b>Dirección:</b> Ph.D (c) Sait Khurama y Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
+          <a href="https://noesis.uis.edu.co/items/545c4673-b7e3-49cd-81d2-a35c9e392c41" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver trabajo</a>
         </div>
 
-        <!-- 5. Inversión conjunta SEV + SEDT (finalizada) -->
+        <!-- 5. Ocurrencia de depósitos minerales tipo pórfidi (finalizada) -->
         <div class="card" data-aos="zoom-in" data-aos-delay="400">
-          <img src="images/INV_CONJUNTA.jpg" alt="Inversión conjunta SEV y SEDT">
-          <h3>Inversión conjunta de modelos geoeléctricos SEV + SEDT</h3>
-          <p><b>Tipo:</b> Investigación (finalizada)</p>
-          <p><b>Objetivo:</b> Desarrollar y evaluar inversión conjunta de datos geoeléctricos de SEV y SEDT para superar las limitaciones de inversiones independientes.</p>
-          <p><b>Realizada por:</b> Geóloga Daniela Quintero y Est. Geol. Erick Villamizar.</p>
-          <p><b>Dirección:</b> Ph.D Sait Khurama y Ph.D (c) Yesid Goyes.</p>
+          <img src="images/sa.jpg" alt="Ocurrencia de depósitos minerales tipo pórfid">
+          <h3>Predicción de la ocurrencia de depósitos minerales tipo pórfido usando técnicas de aprendizaje automático</h3>
+          <p><b>Tipo:</b> Tesis de pregrado (finalizada)</p>
+          <p><b>Objetivo:</b> Predecir la ocurrencia de depósitos minerales tipo pórfido a partir de la integración de
+información geológica, geoquímica y geofísica usando técnicas de aprendizaje automático.</p>
+          <p><b>Realizada por:</b> Msc. Geol. Ana Mantilla.</p>
+          <p><b>Dirección:</b> Ph.D (c) Yesid Goyes.</p>
           <p><b>Línea:</b> Geociencias computacionales.</p>
+          <a href="https://noesis.uis.edu.co/items/bc9f8b11-74a1-4a82-a981-1a80ee942537" target="_blank" rel="noopener noreferrer" class="btn-secondary">Ver trabajo</a>
         </div>
       </div>
     </section>
@@ -350,4 +369,3 @@
   </script>
 </body>
 </html>
-
