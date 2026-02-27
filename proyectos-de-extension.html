@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos de extensión | SIGAC</title>
+  <link rel="icon" href="logo_sigac.png" type="image/png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AOS Animaciones -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
+  <style>
+    @media (max-width: 768px) {
+      body { padding-top: 60px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔹 NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_sigac.png" alt="Logo SIGAC">
+      <div class="logo-text">
+        <span class="nombre">Semillero de investigación</span><br>
+        <span class="semillero">en Geofísica Aplicada y Computacional</span>
+      </div>
+    </div>
+
+    <nav id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="Repositorio.html">Repositorio</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="publicaciones.html">Publicaciones</a>
+      <a href="investigacion.html">Investigación</a>
+      <a href="proyectos-de-extension.html" class="active">Proyectos de extensión</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main style="min-height: 70vh; padding: 60px 20px;">
+    <div style="max-width: 900px; margin: 0 auto;" data-aos="fade-up">
+      <h1 style="margin-bottom: 14px;">Proyectos de extensión</h1>
+        <p style="line-height: 1.7; margin: 0;">
+        El proyecto de extensión del SIGAC, registrado ante la VIE en el marco de CTel Solidario (modalidad educación continua),
+        se desarrolló durante el semestre 2025-2 como el proyecto 6420-5124: “Seminario de nuevas tecnologías para la exploración
+        de recursos energéticos del subsuelo”. En su ejecución se llevaron a cabo cuatro productos de apropiación social del conocimiento:
+        un curso de procesamiento básico de datos gravimétricos y magnetométricos, y tres charlas académicas sobre exploración de gas en Colombia,
+        asesorías para trabajos de grado y redacción de artículos científicos, articulando formación teórica y aplicada para fortalecer capacidades
+        técnicas y académicas en la comunidad universitaria.
+        </p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Semillero SIGAC | Geofísica Aplicada y Computacional</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const toggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    toggle?.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      toggle.classList.toggle('active');
+    });
+  </script>
+
+  <!-- Botón flotante para subir -->
+  <button id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    const scrollBtn = document.getElementById('scrollTopBtn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) scrollBtn.classList.add('show');
+      else scrollBtn.classList.remove('show');
+    });
+
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
