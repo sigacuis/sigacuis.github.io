@@ -13,15 +13,15 @@
 
   <!-- Iconos (para el menú hamburguesa, igual que en index) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <!-- 🔧 FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
+
+  <!-- 🔧 FIX SOLO PARA CELULAR (solo espacio bajo la navbar) -->
   <style>
     @media (max-width: 768px) {
-      body {
-        padding-top: 60px;  /* para que nada se esconda bajo la navbar fija */
-      }
+      body { padding-top: 60px; }
     }
   </style>
 </head>
+
 <body>
   <!-- NAVBAR -->
   <header class="navbar">
@@ -44,7 +44,7 @@
       <a href="contacto.html">Contacto</a>
     </nav>
 
-    <!-- Botón hamburguesa (igual que en index) -->
+    <!-- Botón hamburguesa -->
     <div class="menu-toggle" id="menu-toggle">
       <i class="fa fa-bars"></i>
     </div>
@@ -64,7 +64,9 @@
   <main class="section" data-aos="fade-up">
     <h2>Sobre Nosotros</h2>
     <p>
-      El <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong> fomenta la formación científica en modelamiento numérico, simulación directa e inteligencia artificial aplicada a la exploración del subsuelo, la energía sostenible y los recursos estratégicos.
+      El <strong>Semillero de Investigación en Geofísica Aplicada y Computacional (SIGAC)</strong>
+      fomenta la formación científica en modelamiento numérico, simulación directa e inteligencia artificial
+      aplicada a la exploración del subsuelo, la energía sostenible y los recursos estratégicos.
     </p>
 
     <hr class="divider">
@@ -124,7 +126,6 @@
     <section id="profesionales" data-aos="fade-up">
       <h3>Profesionales</h3>
 
-      <!-- 1. Nicolás -->
       <div class="miembro">
         <img src="thumbs/Nicolas_Cordoba.png" alt="Nicolás Córdoba Castillo">
         <div>
@@ -147,30 +148,6 @@
         </div>
       </div>
 
-      <!-- 2. Daniela -->
-      <div class="miembro">
-        <img src="thumbs/Daniela_Quintero.png" alt="Daniela Quintero Madariaga">
-        <div>
-          <h4><strong>Daniela Quintero Madariaga</strong></h4>
-          <p>Geóloga con intereses en Geofísica, Geociencias Computacionales y Geología Estructural. Dentro del semillero realizó su tesis de pregrado titulada <i>“Integración multifísica para la corrección del desplazamiento estático en métodos eléctricos y disminución de la incertidumbre en los modelos del subsuelo”</i>.</p>
-          <p><b>Email:</b> <span>daniela2202434@correo.uis.edu.co</span></p>
-          <p class="links">
-            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758" target="_blank">
-              <i class="fa-solid fa-id-card"></i> CvLAC
-            </a>
-            <span>|</span>
-            <a href="https://www.linkedin.com/in/geodanielaquintero/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
-            </a>
-            <span>|</span>
-            <a href="https://www.researchgate.net/profile/Daniela-Quintero-30" target="_blank">
-              <i class="fa-brands fa-researchgate"></i> ResearchGate
-            </a>
-          </p>
-        </div>
-      </div>
-
-      <!-- 3. Gabriel -->
       <div class="miembro">
         <img src="thumbs/Gabriel_Moreno.jpg" alt="Gabriel Moreno Sánchez">
         <div>
@@ -221,6 +198,29 @@
           </p>
         </div>
       </div>
+
+      <!-- Daniela en Maestría (como pediste) -->
+      <div class="miembro">
+        <img src="thumbs/Daniela_Quintero.png" alt="Daniela Quintero Madariaga">
+        <div>
+          <h4><strong>Daniela Quintero Madariaga</strong></h4>
+          <p>Geóloga con intereses en Geofísica, Geociencias Computacionales y Geología Estructural. Dentro del semillero realizó su tesis de pregrado titulada <i>“Integración multifísica para la corrección del desplazamiento estático en métodos eléctricos y disminución de la incertidumbre en los modelos del subsuelo”</i>.</p>
+          <p><b>Email:</b> <span>daniela2202434@correo.uis.edu.co</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002173758" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/geodanielaquintero/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <span>|</span>
+            <a href="https://www.researchgate.net/profile/Daniela-Quintero-30" target="_blank">
+              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            </a>
+          </p>
+        </div>
+      </div>
     </section>
 
     <hr class="divider">
@@ -233,7 +233,7 @@
         <img src="thumbs/Adrian_Perez.png" alt="Adrián Alvercy Pérez Montejo">
         <div>
           <h4><strong>Adrián Alvercy Pérez Montejo</strong></h4>
-          <p>Estudiante de geología con intereses en geofísica, geología estructural e hidrogeología. Participó en el proyecto <i>“Aprendizaje profundo guiado por la física para la inversión no supervisada de sondeos eléctricos verticales”</i>.</p>
+          <p>Estudiante de geología con intereses en geofísica, geología estructural e hidrogeología. Participó en el proyecto <i>“Aprendizaje profundo guiado por la física para la inversión no supervisada de sondeos eléctricos verticales” y actualmente se encuentra trabajando en el proyecto de “oil seeps”</i>.</p>
           <p><b>Email:</b> <span>adrian2212481@correo.uis.edu.co</span></p>
           <p class="links">
             <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002192049" target="_blank">
@@ -278,23 +278,87 @@
       </div>
 
       <div class="miembro">
-        <img src="thumbs/Sebastian_Blanco.png" alt="Jhoan Blanco">
+        <img src="thumbs/David-Guiza.png" alt="David Santiago Güiza Vanegas">
         <div>
-          <h4><strong>Jhoan Sebastian Blanco Galvis</strong></h4>
-          <p>Estudiante de geología de octavo semestre con intereses: Geofísica, Geociencias Computacionales, Geología económica. Dentro del semillero se encuentra trabajando en el proyecto <i>"implementación de algoritmos de aprendizaje automático supervisado en mapeos de prospectividad mineral"</i>.</p>
-          </p>
-          <p><b>Email:</b> <span>Jhoan2211075@correo.uis.edu.co</span></p>
+          <h4><strong>David Santiago Güiza Vanegas</strong></h4>
+          <p>Estudiante de Geología de noveno semestre con intereses en Geociencias Computacionales y Yacimientos minerales. Dentro del semillero se encuentra trabajando en el proyecto de <i>“oil seeps”</i>.</p>
+          <p><b>Email:</b> <span>david2181564@correo.uis.edu.co</span></p>
           <p class="links">
-            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002360665" target="_blank">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002453153" target="_blank">
               <i class="fa-solid fa-id-card"></i> CvLAC
             </a>
             <span>|</span>
-            <a href="https://www.linkedin.com/in/jhoan-sebastian-blanco-galvis/" target="_blank">
+            <a href="https://www.linkedin.com/in/david-santiago-g%C3%BCiza-vanegas-986421386/" target="_blank">
               <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Nuevos integrantes (pon tú el nombre real del archivo en thumbs/) -->
+      <div class="miembro">
+        <img src="thumbs/Maria-Roa.png" alt="María Paula Roa Archila">
+        <div>
+          <h4><strong>María Paula Roa Archila</strong></h4>
+          <p>Estudiante de geología de séptimo semestre con intereses: Geofísica, Geociencias Computacionales, Minería y Sistemas de Información Geográfica (SIG). Dentro del semillero se encuentra trabajando en el proyecto de <i>“oil seeps”</i>.</p>
+          <p><b>Email:</b> <span>paularoa2105@gmail.com</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002419295" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
             <span>|</span>
-            <a href="https://www.researchgate.net/profile/Jhoan-Blanco-Galvis?ev=hdr_xprf" target="_blank">
-              <i class="fa-brands fa-researchgate"></i> ResearchGate
+            <a href="https://www.linkedin.com/in/maria-paula-roa-archila-91a216260/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="miembro">
+        <img src="thumbs/Thomas-Quiñonez.png" alt="Thomas Leopoldo Quiñonez Pineda">
+        <div>
+          <h4><strong>Thomas Leopoldo Quiñonez Pineda</strong></h4>
+          <p>Estudiante de geología de séptimo semestre con intereses: Geología Estructural, Geofísica, Teledetección y Sistemas de Información Geográfica (SIG). Dentro del semillero se encuentra trabajando en el proyecto de <i>“oil seeps”</i>.</p>
+          <p><b>Email:</b> <span>thomas1212ttt@gmail.com</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002419352" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/thomasqui%C3%B1onez/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="miembro">
+        <img src="thumbs/Juan-Vesga.png" alt="Juan Sebastián Vesga Figueroa">
+        <div>
+          <h4><strong>Juan Sebastián Vesga Figueroa</strong></h4>
+          <p>Estudiante de geología de séptimo semestre con intereses: Geofísica, Geociencias Computacionales, SIG y geología estructural. Dentro del semillero se encuentra trabajando en el proyecto de <i>“oil seeps”</i>.</p>
+          <p><b>Email:</b> <span>sebastfigueroa27@gmail.com</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002452778" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="miembro">
+        <img src="thumbs/Sanin_Celedon.png" alt="Sanin Andrea Celedón del Prado">
+        <div>
+          <h4><strong>Sanin Andrea Celedón del Prado</strong></h4>
+          <p>Estudiante de geología de séptimo semestre con intereses: Geofísica, Mineralogía, Hidrogeología y SIG. Dentro del semillero se encuentra trabajando en el proyecto de <i>“oil seeps”</i>.</p>
+          <p><b>Email:</b> <span>saninaceledon@gmail.com</span></p>
+          <p class="links">
+            <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0002453144" target="_blank">
+              <i class="fa-solid fa-id-card"></i> CvLAC
+            </a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/sanin-celedon-1a800b226/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
           </p>
         </div>
@@ -310,7 +374,7 @@
   <script>
     AOS.init({ duration: 1000, once: true });
 
-    // Menú hamburguesa (igual que en index)
+    // Menú hamburguesa
     const toggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     toggle?.addEventListener('click', () => {
@@ -322,20 +386,10 @@
   <style>
     html { scroll-behavior: smooth; }
 
-    body {
-      background-color: #ffffff;
-      color: #111;
-    }
+    body { background-color: #ffffff; color: #111; }
 
-    h2 {
-      color: #b30000;
-    }
+    h2, h3 { color: #b30000; }
 
-    h3 {
-      color: #b30000;
-    }
-
-    /* 🔹 Nombres con gris suave y negrilla, tipografía igual al texto */
     h4 {
       color: #555;
       margin-bottom: 8px;
@@ -374,19 +428,11 @@
 
     .miembro div { flex: 1; }
 
-    .miembro p {
-      margin: 5px 0;
-      text-align: justify;
-    }
+    .miembro p { margin: 5px 0; text-align: justify; }
 
-    .miembro p.links {
-      text-align: left;
-    }
+    .miembro p.links { text-align: left; }
 
-    .miembro b {
-      color: #222;
-      font-weight: 700;
-    }
+    .miembro b { color: #222; font-weight: 700; }
 
     .miembro a {
       color: #000;
@@ -394,10 +440,7 @@
       text-decoration: none;
     }
 
-    .miembro a:hover {
-      text-decoration: none;
-      color: #b30000;
-    }
+    .miembro a:hover { color: #b30000; }
 
     .miembro a:active,
     .miembro a:focus {
@@ -412,16 +455,10 @@
       font-size: 0.95rem;
     }
 
-    .miembro p.links span {
-      margin: 0 4px;
-      color: #555;
-    }
+    .miembro p.links span { margin: 0 4px; color: #555; }
 
-    .miembro p.links i {
-      font-size: 0.95rem;
-    }
+    .miembro p.links i { font-size: 0.95rem; }
 
-    /* Barra lateral – versión escritorio */
     .sidebar {
       position: fixed;
       top: 120px;
@@ -431,7 +468,7 @@
       color: #fff;
       border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
       z-index: 50;
     }
 
@@ -444,12 +481,7 @@
       padding-bottom: 5px;
     }
 
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
+    .sidebar ul { list-style: none; padding: 0; margin: 0; }
     .sidebar li { margin: 10px 0; }
 
     .sidebar a {
@@ -468,39 +500,26 @@
       color: #fff;
     }
 
-    /* Main desplazado a la derecha en escritorio */
-    main.section {
-      margin-left: 280px;
-    }
+    main.section { margin-left: 280px; }
 
-    /* Recuadros de cada bloque */
-    #docentes,
-    #maestria,
-    #profesionales,
-    #pregrado {
+    #docentes, #maestria, #profesionales, #pregrado {
       background-color: #f8f8f8;
       color: #111;
       padding: 30px;
       border-radius: 10px;
     }
 
-    /* 📱 RESPONSIVE SOLO MÓVIL/TABLET */
     @media (max-width: 900px) {
-      body {
-        overflow-x: hidden;
-      }
+      body { overflow-x: hidden; }
 
       .sidebar {
         position: static;
-        left: 0;
-        right: 0;
+        left: 0; right: 0;
         width: auto;
         margin: 20px 16px 10px;
       }
 
-      main.section {
-        margin-left: 0;
-      }
+      main.section { margin-left: 0; }
 
       .miembro {
         flex-direction: column;
@@ -523,36 +542,26 @@
         justify-content: center;
       }
 
-      .miembro p.links {
-        text-align: center;
-      }
+      .miembro p.links { text-align: center; }
     }
   </style>
+
   <!-- Botón flotante para subir -->
   <button id="scrollTopBtn" aria-label="Volver arriba">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
 
   <script>
-    // Mostrar / ocultar botón
     const scrollBtn = document.getElementById('scrollTopBtn');
 
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
+      if (window.scrollY > 300) scrollBtn.classList.add('show');
+      else scrollBtn.classList.remove('show');
     });
 
-    // Scroll suave hacia arriba
     scrollBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
 </html>
-
