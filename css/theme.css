@@ -650,3 +650,21 @@ img.size_image{
 	justify-content: center;
 	text-align: center;
 }
+
+.card .insta-embed {
+  width: 100%;
+  height: 480px;          /* alto fijo igual para TODAS las tarjetas */
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card .insta-embed iframe {
+  width: 100%;
+  height: 700px;           /* alto "real" generoso para que el post quepa */
+  border: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* centra verticalmente y recorta parejo arriba/abajo */
+}
