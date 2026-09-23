@@ -70,7 +70,7 @@
     "alt": "Poster inversión no supervisada de resistividad eléctrica 1D",
     "description": "Este trabajo presenta una metodología de inversión no supervisada de sondeos eléctricos verticales (SEV) mediante redes neuronales guiadas por la física. Se implementa un operador directo diferenciable acoplado a un esquema de aprendizaje profundo, lo que permite estimar modelos 1D de resistividad sin necesidad de datos etiquetados. Los resultados en datos sintéticos y reales muestran mejoras significativas en precisión y resolución respecto a [..]",
     "author": "Adrian Perez-Montejo; Paul Goyes-Peñafiel"
-  }
+  },
   {
     "title": "Joint Inversion of Low and High Moment TDEM Data for Enhancement Subsurface Models",
     "date": "26 de Agosto, 2026",
@@ -79,5 +79,5 @@
     "alt": "Joint Inversion of Low and High Moment TDEM Data",
     "description": "Time-Domain Electromagnetic (TDEM) method has been widely used in environmental, hydrogeological, and mining studies. TDEM uses a transient current as its source, described by a waveform that presents two transmission moments: High Moment (HM) and Low Moment (LM), characterized by high and low currents, respectively.",
     "author": "Paul Goyes-Peñafiel, Erick E. Villamizar-Sanguino, Daniela Quintero-Madariaga, Ana Gabriela Mantilla-Dulcey, Sait Khurama-Velásquez"
-}
+  }
 ]
